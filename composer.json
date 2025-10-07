@@ -1,8 +1,8 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/livewire-starter-kit",
+    "name": "drewroberts/social",
     "type": "project",
-    "description": "The official Laravel starter kit for Livewire.",
+    "description": "Social Media management platform built with Laravel.",
     "keywords": [
         "laravel",
         "framework"
