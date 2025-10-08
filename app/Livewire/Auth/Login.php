@@ -70,6 +70,7 @@ class Login extends Component
             ]);
         }
 
+        /** @var User $user */
         return $user;
     }
 

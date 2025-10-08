@@ -14,7 +14,7 @@
 
 declare(strict_types=1);
 
-class Container_e2a630bdf9 extends _PHPStan_b0aa47e74\Nette\DI\Container
+class Container_caeb63475b extends _PHPStan_b0aa47e74\Nette\DI\Container
 {
 	protected $tags = [
 		'phpstan.broker.dynamicMethodReturnTypeExtension' => [
@@ -2745,7 +2745,13 @@ class Container_e2a630bdf9 extends _PHPStan_b0aa47e74\Nette\DI\Container
 
 	public function createService042(): PHPStan\Analyser\Ignore\IgnoredErrorHelper
 	{
-		return new PHPStan\Analyser\Ignore\IgnoredErrorHelper($this->getService('05'), [], true);
+		return new PHPStan\Analyser\Ignore\IgnoredErrorHelper(
+			$this->getService('05'),
+			[
+				'#Call to an undefined (static )?method Atymic\\\Twitter\\\(Facade\\\Twitter|Twitter)::(getRequestToken|getAuthenticateUrl|getAccessToken|getCredentials|uploadMedia|postTweet|destroyTweet)\(\)#',
+			],
+			true
+		);
 	}
 
 
@@ -4969,7 +4975,7 @@ class Container_e2a630bdf9 extends _PHPStan_b0aa47e74\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_e2a630bdf9 $container)
+			public function __construct(Container_caeb63475b $container)
 			{
 				$this->container = $container;
 			}
@@ -4989,7 +4995,7 @@ class Container_e2a630bdf9 extends _PHPStan_b0aa47e74\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_e2a630bdf9 $container)
+			public function __construct(Container_caeb63475b $container)
 			{
 				$this->container = $container;
 			}
@@ -5012,7 +5018,7 @@ class Container_e2a630bdf9 extends _PHPStan_b0aa47e74\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_e2a630bdf9 $container)
+			public function __construct(Container_caeb63475b $container)
 			{
 				$this->container = $container;
 			}
@@ -5032,7 +5038,7 @@ class Container_e2a630bdf9 extends _PHPStan_b0aa47e74\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_e2a630bdf9 $container)
+			public function __construct(Container_caeb63475b $container)
 			{
 				$this->container = $container;
 			}
@@ -5097,7 +5103,7 @@ class Container_e2a630bdf9 extends _PHPStan_b0aa47e74\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_e2a630bdf9 $container)
+			public function __construct(Container_caeb63475b $container)
 			{
 				$this->container = $container;
 			}
@@ -5155,7 +5161,7 @@ class Container_e2a630bdf9 extends _PHPStan_b0aa47e74\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_e2a630bdf9 $container)
+			public function __construct(Container_caeb63475b $container)
 			{
 				$this->container = $container;
 			}
@@ -8460,7 +8466,7 @@ class Container_e2a630bdf9 extends _PHPStan_b0aa47e74\Nette\DI\Container
 	}
 
 
-	public function createServiceContainer(): Container_e2a630bdf9
+	public function createServiceContainer(): Container_caeb63475b
 	{
 		return $this;
 	}
@@ -8981,7 +8987,9 @@ class Container_e2a630bdf9 extends _PHPStan_b0aa47e74\Nette\DI\Container
 			'tipsOfTheDay' => true,
 			'reportMagicMethods' => true,
 			'reportMagicProperties' => true,
-			'ignoreErrors' => [],
+			'ignoreErrors' => [
+				'#Call to an undefined (static )?method Atymic\\\Twitter\\\(Facade\\\Twitter|Twitter)::(getRequestToken|getAuthenticateUrl|getAccessToken|getCredentials|uploadMedia|postTweet|destroyTweet)\(\)#',
+			],
 			'internalErrorsCountLimit' => 50,
 			'cache' => ['nodesByStringCountMax' => 256],
 			'reportUnmatchedIgnoredErrors' => true,

@@ -20,7 +20,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/routes/console.php' => 
     array (
-      0 => '52de04a63465fdf9ec7b30e5f306acdd75d7a9e3',
+      0 => '777b0459d5820c5c31da0d63fba84e3b8a500a5c',
       1 => 
       array (
       ),

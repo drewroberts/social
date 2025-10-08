@@ -21,7 +21,8 @@ class ListPurges extends ListRecords
                 ->label('Import CSV')
                 ->icon('heroicon-o-arrow-up-tray')
                 ->color('primary')
-                ->form([
+                ->fillForm([])
+                ->schema([
                     FileUpload::make('csv_file')
                         ->label('CSV File')
                         ->acceptedFileTypes(['text/csv', 'application/csv', 'text/plain'])
@@ -57,7 +58,7 @@ class ListPurges extends ListRecords
                     // Read headers with proper CSV parsing (comma separator, double-quote enclosure)
                     $headers = fgetcsv($file, 0, ',', '"');
 
-                    if ($headers === false || empty($headers)) {
+                    if ($headers === false) {
                         fclose($file);
                         Notification::make()
                             ->danger()
@@ -119,17 +120,11 @@ class ListPurges extends ListRecords
                         // Combine with original headers (preserving case)
                         $rowData = array_combine($headers, $row);
 
-                        if ($rowData === false) {
-                            $skipped++;
-
-                            continue;
-                        }
-
                         // Create case-insensitive lookup
                         $rowDataLower = array_change_key_case($rowData, CASE_LOWER);
 
                         // Validate required fields
-                        if (empty($rowDataLower['post_id'])) {
+                        if (! isset($rowDataLower['post_id']) || empty($rowDataLower['post_id'])) {
                             $skipped++;
 
                             continue;
@@ -156,8 +151,7 @@ class ListPurges extends ListRecords
                         } catch (\Exception $e) {
                             $skipped++;
                             if (count($errors) < 5) {
-                                $postId = $rowDataLower['post_id'] ?? 'unknown';
-                                $errors[] = "Row {$postId}: ".$e->getMessage();
+                                $errors[] = "Row {$rowDataLower['post_id']}: ".$e->getMessage();
                             }
                         }
                     }

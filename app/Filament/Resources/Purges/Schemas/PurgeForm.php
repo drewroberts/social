@@ -38,7 +38,7 @@ class PurgeForm
 
                 Components\TextInput::make('status')
                     ->label('Status')
-                    ->default(fn (?Purge $record): string => $record?->status ?? 'Pending')
+                    ->default(fn (?Purge $record): string => $record->status ?? 'Pending')
                     ->disabled()
                     ->dehydrated(false),
 

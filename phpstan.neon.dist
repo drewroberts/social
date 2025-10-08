@@ -14,3 +14,6 @@ parameters:
     excludePaths:
         - database/factories
         - database/seeders
+    ignoreErrors:
+        # Twitter package uses magic methods via __call
+        - '#Call to an undefined (static )?method Atymic\\Twitter\\(Facade\\Twitter|Twitter)::(getRequestToken|getAuthenticateUrl|getAccessToken|getCredentials|uploadMedia|postTweet|destroyTweet)\(\)#'

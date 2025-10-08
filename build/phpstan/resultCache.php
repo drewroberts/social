@@ -2830,369 +2830,6 @@ return [
 	'projectExtensionFiles' => array (
 ),
 	'errorsCallback' => static function (): array { return array (
-  '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php' => 
-  array (
-    0 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Cannot access property $is_active on Illuminate\\Database\\Eloquent\\Model|int|string.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'line' => 21,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 21,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.nonObject',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    1 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Cannot call method isTokenExpired() on Illuminate\\Database\\Eloquent\\Model|int|string.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'line' => 21,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 21,
-       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
-       'identifier' => 'method.nonObject',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    2 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Cannot access property $service on Illuminate\\Database\\Eloquent\\Model|int|string.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'line' => 22,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 22,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.nonObject',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    3 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Cannot access property $service on Illuminate\\Database\\Eloquent\\Model|int|string.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'line' => 30,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 30,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.nonObject',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    4 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Parameter #1 $account of method App\\Services\\TwitterAccountService::verifyCredentials() expects App\\Models\\Account, Illuminate\\Database\\Eloquent\\Model|int|string|null given.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'line' => 35,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 35,
-       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
-       'identifier' => 'argument.type',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    5 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Cannot access property $service on Illuminate\\Database\\Eloquent\\Model|int|string.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'line' => 58,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 58,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.nonObject',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    6 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Parameter #1 $account of method App\\Services\\TwitterAccountService::disconnect() expects App\\Models\\Account, Illuminate\\Database\\Eloquent\\Model|int|string|null given.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'line' => 63,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 63,
-       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
-       'identifier' => 'argument.type',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    7 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Cannot access property $username on Illuminate\\Database\\Eloquent\\Model|int|string.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'line' => 68,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 68,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.nonObject',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-  ),
-  '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Schemas/AccountForm.php' => 
-  array (
-    0 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Call to method content() of deprecated class Filament\\Forms\\Components\\Placeholder:
-Use `TextEntry` with the `state()` method instead.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Schemas/AccountForm.php',
-       'line' => 34,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Schemas/AccountForm.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 34,
-       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
-       'identifier' => 'method.deprecatedClass',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    1 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Call to static method make() on deprecated class Filament\\Forms\\Components\\Placeholder:
-Use `TextEntry` with the `state()` method instead.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Schemas/AccountForm.php',
-       'line' => 34,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Schemas/AccountForm.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 34,
-       'nodeType' => 'PhpParser\\Node\\Expr\\StaticCall',
-       'identifier' => 'staticMethod.deprecatedClass',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    2 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Call to method content() of deprecated class Filament\\Forms\\Components\\Placeholder:
-Use `TextEntry` with the `state()` method instead.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Schemas/AccountForm.php',
-       'line' => 40,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Schemas/AccountForm.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 40,
-       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
-       'identifier' => 'method.deprecatedClass',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    3 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Call to static method make() on deprecated class Filament\\Forms\\Components\\Placeholder:
-Use `TextEntry` with the `state()` method instead.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Schemas/AccountForm.php',
-       'line' => 40,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Schemas/AccountForm.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 40,
-       'nodeType' => 'PhpParser\\Node\\Expr\\StaticCall',
-       'identifier' => 'staticMethod.deprecatedClass',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-  ),
-  '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php' => 
-  array (
-    0 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Call to deprecated method form() of class Filament\\Actions\\Action:
-Use `schema() instead.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php',
-       'line' => 20,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 20,
-       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
-       'identifier' => 'method.deprecated',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    1 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Variable $headers in empty() always exists and is not falsy.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php',
-       'line' => 58,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 58,
-       'nodeType' => 'PhpParser\\Node\\Expr\\Empty_',
-       'identifier' => 'empty.variable',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    2 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Strict comparison using === between non-empty-array<string, string|null> and false will always evaluate to false.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php',
-       'line' => 117,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 117,
-       'nodeType' => 'PhpParser\\Node\\Expr\\BinaryOp\\Identical',
-       'identifier' => 'identical.alwaysFalse',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    3 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Offset \'post_id\' on non-empty-array<string, string|null> on left side of ?? always exists and is not nullable.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php',
-       'line' => 151,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 151,
-       'nodeType' => 'PhpParser\\Node\\Expr\\BinaryOp\\Coalesce',
-       'identifier' => 'nullCoalesce.offset',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-  ),
-  '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Schemas/PurgeForm.php' => 
-  array (
-    0 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Using nullsafe property access "?->status" on left side of ?? is unnecessary. Use -> instead.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Schemas/PurgeForm.php',
-       'line' => 41,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Schemas/PurgeForm.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 41,
-       'nodeType' => 'PhpParser\\Node\\Expr\\BinaryOp\\Coalesce',
-       'identifier' => 'nullsafe.neverNull',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-  ),
-  '/Users/drewroberts/Code/social/app/Livewire/Auth/Login.php' => 
-  array (
-    0 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Method App\\Livewire\\Auth\\Login::validateCredentials() should return App\\Models\\User but returns Illuminate\\Contracts\\Auth\\Authenticatable.',
-       'file' => '/Users/drewroberts/Code/social/app/Livewire/Auth/Login.php',
-       'line' => 73,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Livewire/Auth/Login.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 73,
-       'nodeType' => 'PhpParser\\Node\\Stmt\\Return_',
-       'identifier' => 'return.type',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-  ),
-  '/Users/drewroberts/Code/social/app/Services/PurgeService.php' => 
-  array (
-    0 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Parameter #2 $account of method App\\Services\\TwitterAccountService::deleteTweet() expects App\\Models\\Account, Illuminate\\Database\\Eloquent\\Model given.',
-       'file' => '/Users/drewroberts/Code/social/app/Services/PurgeService.php',
-       'line' => 58,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Services/PurgeService.php',
-       'traitFilePath' => NULL,
-       'tip' => NULL,
-       'nodeLine' => 58,
-       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
-       'identifier' => 'argument.type',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    1 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property Illuminate\\Database\\Eloquent\\Model::$username.',
-       'file' => '/Users/drewroberts/Code/social/app/Services/PurgeService.php',
-       'line' => 67,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Services/PurgeService.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 67,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.notFound',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-  ),
   '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php' => 
   array (
     0 => 
@@ -3396,7 +3033,7 @@ Use `schema() instead.',
       array (
         0 => 'Illuminate\\Database\\Eloquent\\Builder',
         1 => 'create',
-        2 => 140,
+        2 => 143,
       ),
     ),
   ),
@@ -3636,7 +3273,7 @@ Use `schema() instead.',
       1 => 
       array (
         0 => 'auth.throttle',
-        1 => 90,
+        1 => 91,
       ),
     ),
     'PHPStan\\Rules\\DeadCode\\PossiblyPureFuncCallCollector' => 
@@ -3644,7 +3281,7 @@ Use `schema() instead.',
       0 => 
       array (
         0 => 'event',
-        1 => 85,
+        1 => 86,
       ),
     ),
     'PHPStan\\Rules\\DeadCode\\PossiblyPureStaticCallCollector' => 
@@ -3942,7 +3579,7 @@ Use `schema() instead.',
 	'dependencies' => array (
   '/Users/drewroberts/Code/social/app/Console/Commands/ProcessPurgeQueue.php' => 
   array (
-    'fileHash' => 'eb6db2da74b1ff5b28c39168b34bfec3a3c17a33',
+    'fileHash' => 'daf3590e79bb028c55f2b6c6addd6af2986e1a83',
     'dependentFiles' => 
     array (
     ),
@@ -3961,7 +3598,7 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/app/Enums/AllowedEmailDomain.php' => 
   array (
-    'fileHash' => 'e921d8521e2326810b4ae997a2d9c700db296006',
+    'fileHash' => 'cd5bd006b888e74a38595d25aae59a0e62b706b2',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Livewire/Auth/Register.php',
@@ -3969,7 +3606,7 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/app/Enums/SocialService.php' => 
   array (
-    'fileHash' => 'fe427449f02eadd980694d5ae2f375f23377d0c7',
+    'fileHash' => '523706e3fb9494d684346cf404839faabf0d3e33',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
@@ -4000,7 +3637,7 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php' => 
   array (
-    'fileHash' => '97476c3c6f1d2f5be12d9c7d438718a35b9d909e',
+    'fileHash' => 'b511923547bdc610d285dcfde5f7bd2d82f6ffc7',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/AccountResource.php',
@@ -4008,7 +3645,7 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Schemas/AccountForm.php' => 
   array (
-    'fileHash' => '6f6268003d58943edc61ae68568d53bc8c663b9d',
+    'fileHash' => '4f4f7d2955bb699baa9ae2be116e3f9a83209e8e',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/AccountResource.php',
@@ -4016,7 +3653,7 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php' => 
   array (
-    'fileHash' => '8b44c529674301a42109766d7e464c0ed88a2875',
+    'fileHash' => '923eeb001aa659a44b0afd5f4aea60d613b0f093',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/AccountResource.php',
@@ -4024,7 +3661,7 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php' => 
   array (
-    'fileHash' => '75608864fcf5f05da2adff665d7733656258898e',
+    'fileHash' => 'eb5f819a73dd015ea0d5f585036d219a5572c3b4',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/PurgeResource.php',
@@ -4049,7 +3686,7 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Schemas/PurgeForm.php' => 
   array (
-    'fileHash' => '9bfd20380dfe7567d156ed458b1af2770e7dc364',
+    'fileHash' => 'ed2cfa4df71df367b81ebfab78e240c5aae14d59',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/PurgeResource.php',
@@ -4057,7 +3694,7 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php' => 
   array (
-    'fileHash' => 'c2b497428cd4dec602b644984a34e50bc10a2f51',
+    'fileHash' => '567451f17e9aa886ea53819c208645d8d592242f',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/PurgeResource.php',
@@ -4150,7 +3787,7 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/app/Http/Controllers/SocialAuthController.php' => 
   array (
-    'fileHash' => 'c9e5dba006cda2b4080a20095309d4899182d5c2',
+    'fileHash' => '2aecd6fa5cbb31f3e48e3d9c84c3d4c8f535ae78',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/routes/web.php',
@@ -4208,7 +3845,7 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/app/Livewire/Auth/Login.php' => 
   array (
-    'fileHash' => 'b25f8f5e4dacd3245090ee9acee8a23620a29ffd',
+    'fileHash' => '335c8274793cd4b7fc01ba4f681350882d7e8a89',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/routes/auth.php',
@@ -4216,7 +3853,7 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/app/Livewire/Auth/Register.php' => 
   array (
-    'fileHash' => 'b6ccf836cfc9846cdfed105556c3f95761d7ba34',
+    'fileHash' => '4e0a07b924b1e309e924018dd96f5d6ea120800c',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/routes/auth.php',
@@ -4286,25 +3923,26 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/app/Models/Account.php' => 
   array (
-    'fileHash' => 'aeb5d079774ef80e8b1d2c3de57e7818de11971c',
+    'fileHash' => '71ff81af8bf0137b9f17e676deefc486bb11348f',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Contracts/SocialAccountService.php',
       1 => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/AccountResource.php',
-      2 => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Schemas/AccountForm.php',
-      3 => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
-      4 => '/Users/drewroberts/Code/social/app/Http/Controllers/AccountController.php',
-      5 => '/Users/drewroberts/Code/social/app/Http/Controllers/SocialAuthController.php',
-      6 => '/Users/drewroberts/Code/social/app/Models/Purge.php',
-      7 => '/Users/drewroberts/Code/social/app/Models/User.php',
-      8 => '/Users/drewroberts/Code/social/app/Policies/AccountPolicy.php',
-      9 => '/Users/drewroberts/Code/social/app/Services/PurgeService.php',
-      10 => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
+      2 => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
+      3 => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Schemas/AccountForm.php',
+      4 => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
+      5 => '/Users/drewroberts/Code/social/app/Http/Controllers/AccountController.php',
+      6 => '/Users/drewroberts/Code/social/app/Http/Controllers/SocialAuthController.php',
+      7 => '/Users/drewroberts/Code/social/app/Models/Purge.php',
+      8 => '/Users/drewroberts/Code/social/app/Models/User.php',
+      9 => '/Users/drewroberts/Code/social/app/Policies/AccountPolicy.php',
+      10 => '/Users/drewroberts/Code/social/app/Services/PurgeService.php',
+      11 => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
     ),
   ),
   '/Users/drewroberts/Code/social/app/Models/Purge.php' => 
   array (
-    'fileHash' => '1f2749eeaaab5ef30120c50bff8b94debac78d9a',
+    'fileHash' => 'eb91275824ca3d0c435a370a09cdf39d4ed3fa4b',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Console/Commands/ProcessPurgeQueue.php',
@@ -4344,14 +3982,14 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/app/Policies/AccountPolicy.php' => 
   array (
-    'fileHash' => 'abee68dfb3399b211a8f2df7c10951898896bc3b',
+    'fileHash' => '65237f236ed4ed5d9560a6658b9bc4cfa5dcf9d6',
     'dependentFiles' => 
     array (
     ),
   ),
   '/Users/drewroberts/Code/social/app/Policies/PurgePolicy.php' => 
   array (
-    'fileHash' => 'aee110d6b4391a086bca17ea716c428a56bd2bb1',
+    'fileHash' => 'd8528efef0647ac0982f7c4cc257da73b634d2b8',
     'dependentFiles' => 
     array (
     ),
@@ -4379,7 +4017,7 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/app/Services/PurgeService.php' => 
   array (
-    'fileHash' => '6ed08cd548fa354b010e7a7c3d3bd27546e871a5',
+    'fileHash' => '23f33dc940c3bcceeeea723b4540c1f279e64020',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Console/Commands/ProcessPurgeQueue.php',
@@ -4388,7 +4026,7 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php' => 
   array (
-    'fileHash' => 'b000bf4a2aea8e2dadfd4284e53245a319c81faf',
+    'fileHash' => 'fcc8aadf4f80074e5f3d535ebb40063bbd1deb20',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
@@ -4525,7 +4163,7 @@ Use `schema() instead.',
   ),
   '/Users/drewroberts/Code/social/routes/console.php' => 
   array (
-    'fileHash' => '52de04a63465fdf9ec7b30e5f306acdd75d7a9e3',
+    'fileHash' => '777b0459d5820c5c31da0d63fba84e3b8a500a5c',
     'dependentFiles' => 
     array (
     ),
@@ -8637,7 +8275,6 @@ Use `schema() instead.',
              'uses' => 
             array (
               'allowedemaildomain' => 'App\\Enums\\AllowedEmailDomain',
-              'unauthorizedemaildomainexception' => 'App\\Exceptions\\UnauthorizedEmailDomainException',
               'user' => 'App\\Models\\User',
               'registered' => 'Illuminate\\Auth\\Events\\Registered',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
@@ -11132,7 +10769,6 @@ Use `schema() instead.',
             array (
               'account' => 'App\\Models\\Account',
               'user' => 'App\\Models\\User',
-              'response' => 'Illuminate\\Auth\\Access\\Response',
             ),
              'constUses' => 
             array (
@@ -11176,7 +10812,6 @@ Use `schema() instead.',
             array (
               'account' => 'App\\Models\\Account',
               'user' => 'App\\Models\\User',
-              'response' => 'Illuminate\\Auth\\Access\\Response',
             ),
              'constUses' => 
             array (
@@ -11231,7 +10866,6 @@ Use `schema() instead.',
             array (
               'account' => 'App\\Models\\Account',
               'user' => 'App\\Models\\User',
-              'response' => 'Illuminate\\Auth\\Access\\Response',
             ),
              'constUses' => 
             array (
@@ -11275,7 +10909,6 @@ Use `schema() instead.',
             array (
               'account' => 'App\\Models\\Account',
               'user' => 'App\\Models\\User',
-              'response' => 'Illuminate\\Auth\\Access\\Response',
             ),
              'constUses' => 
             array (
@@ -11330,7 +10963,6 @@ Use `schema() instead.',
             array (
               'account' => 'App\\Models\\Account',
               'user' => 'App\\Models\\User',
-              'response' => 'Illuminate\\Auth\\Access\\Response',
             ),
              'constUses' => 
             array (
@@ -11385,7 +11017,6 @@ Use `schema() instead.',
             array (
               'account' => 'App\\Models\\Account',
               'user' => 'App\\Models\\User',
-              'response' => 'Illuminate\\Auth\\Access\\Response',
             ),
              'constUses' => 
             array (
@@ -11440,7 +11071,6 @@ Use `schema() instead.',
             array (
               'account' => 'App\\Models\\Account',
               'user' => 'App\\Models\\User',
-              'response' => 'Illuminate\\Auth\\Access\\Response',
             ),
              'constUses' => 
             array (
@@ -11521,7 +11151,6 @@ Use `schema() instead.',
             array (
               'purge' => 'App\\Models\\Purge',
               'user' => 'App\\Models\\User',
-              'response' => 'Illuminate\\Auth\\Access\\Response',
             ),
              'constUses' => 
             array (
@@ -11565,7 +11194,6 @@ Use `schema() instead.',
             array (
               'purge' => 'App\\Models\\Purge',
               'user' => 'App\\Models\\User',
-              'response' => 'Illuminate\\Auth\\Access\\Response',
             ),
              'constUses' => 
             array (
@@ -11620,7 +11248,6 @@ Use `schema() instead.',
             array (
               'purge' => 'App\\Models\\Purge',
               'user' => 'App\\Models\\User',
-              'response' => 'Illuminate\\Auth\\Access\\Response',
             ),
              'constUses' => 
             array (
@@ -11664,7 +11291,6 @@ Use `schema() instead.',
             array (
               'purge' => 'App\\Models\\Purge',
               'user' => 'App\\Models\\User',
-              'response' => 'Illuminate\\Auth\\Access\\Response',
             ),
              'constUses' => 
             array (
@@ -11719,7 +11345,6 @@ Use `schema() instead.',
             array (
               'purge' => 'App\\Models\\Purge',
               'user' => 'App\\Models\\User',
-              'response' => 'Illuminate\\Auth\\Access\\Response',
             ),
              'constUses' => 
             array (
@@ -11774,7 +11399,6 @@ Use `schema() instead.',
             array (
               'purge' => 'App\\Models\\Purge',
               'user' => 'App\\Models\\User',
-              'response' => 'Illuminate\\Auth\\Access\\Response',
             ),
              'constUses' => 
             array (
@@ -11829,7 +11453,6 @@ Use `schema() instead.',
             array (
               'purge' => 'App\\Models\\Purge',
               'user' => 'App\\Models\\User',
-              'response' => 'Illuminate\\Auth\\Access\\Response',
             ),
              'constUses' => 
             array (
@@ -12355,8 +11978,8 @@ Use `schema() instead.',
               'socialaccountservice' => 'App\\Contracts\\SocialAccountService',
               'socialservice' => 'App\\Enums\\SocialService',
               'account' => 'App\\Models\\Account',
-              'user' => 'App\\Models\\User',
               'purge' => 'App\\Models\\Purge',
+              'user' => 'App\\Models\\User',
               'twitter' => 'Atymic\\Twitter\\Facade\\Twitter',
               'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
               'request' => 'Illuminate\\Http\\Request',
@@ -12406,8 +12029,8 @@ Use `schema() instead.',
               'socialaccountservice' => 'App\\Contracts\\SocialAccountService',
               'socialservice' => 'App\\Enums\\SocialService',
               'account' => 'App\\Models\\Account',
-              'user' => 'App\\Models\\User',
               'purge' => 'App\\Models\\Purge',
+              'user' => 'App\\Models\\User',
               'twitter' => 'Atymic\\Twitter\\Facade\\Twitter',
               'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
               'request' => 'Illuminate\\Http\\Request',
@@ -12469,8 +12092,8 @@ Use `schema() instead.',
               'socialaccountservice' => 'App\\Contracts\\SocialAccountService',
               'socialservice' => 'App\\Enums\\SocialService',
               'account' => 'App\\Models\\Account',
-              'user' => 'App\\Models\\User',
               'purge' => 'App\\Models\\Purge',
+              'user' => 'App\\Models\\User',
               'twitter' => 'Atymic\\Twitter\\Facade\\Twitter',
               'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
               'request' => 'Illuminate\\Http\\Request',
@@ -12520,8 +12143,8 @@ Use `schema() instead.',
               'socialaccountservice' => 'App\\Contracts\\SocialAccountService',
               'socialservice' => 'App\\Enums\\SocialService',
               'account' => 'App\\Models\\Account',
-              'user' => 'App\\Models\\User',
               'purge' => 'App\\Models\\Purge',
+              'user' => 'App\\Models\\User',
               'twitter' => 'Atymic\\Twitter\\Facade\\Twitter',
               'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
               'request' => 'Illuminate\\Http\\Request',
@@ -12593,8 +12216,8 @@ Use `schema() instead.',
               'socialaccountservice' => 'App\\Contracts\\SocialAccountService',
               'socialservice' => 'App\\Enums\\SocialService',
               'account' => 'App\\Models\\Account',
-              'user' => 'App\\Models\\User',
               'purge' => 'App\\Models\\Purge',
+              'user' => 'App\\Models\\User',
               'twitter' => 'Atymic\\Twitter\\Facade\\Twitter',
               'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
               'request' => 'Illuminate\\Http\\Request',
@@ -12645,8 +12268,8 @@ Use `schema() instead.',
               'socialaccountservice' => 'App\\Contracts\\SocialAccountService',
               'socialservice' => 'App\\Enums\\SocialService',
               'account' => 'App\\Models\\Account',
-              'user' => 'App\\Models\\User',
               'purge' => 'App\\Models\\Purge',
+              'user' => 'App\\Models\\User',
               'twitter' => 'Atymic\\Twitter\\Facade\\Twitter',
               'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
               'request' => 'Illuminate\\Http\\Request',
@@ -12707,8 +12330,8 @@ Use `schema() instead.',
               'socialaccountservice' => 'App\\Contracts\\SocialAccountService',
               'socialservice' => 'App\\Enums\\SocialService',
               'account' => 'App\\Models\\Account',
-              'user' => 'App\\Models\\User',
               'purge' => 'App\\Models\\Purge',
+              'user' => 'App\\Models\\User',
               'twitter' => 'Atymic\\Twitter\\Facade\\Twitter',
               'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
               'request' => 'Illuminate\\Http\\Request',

@@ -74,7 +74,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Enums/AllowedEmailDomain.php' => 
     array (
-      0 => 'e921d8521e2326810b4ae997a2d9c700db296006',
+      0 => 'cd5bd006b888e74a38595d25aae59a0e62b706b2',
       1 => 
       array (
         0 => 'app\\enums\\allowedemaildomain',
@@ -90,7 +90,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Enums/SocialService.php' => 
     array (
-      0 => 'fe427449f02eadd980694d5ae2f375f23377d0c7',
+      0 => '523706e3fb9494d684346cf404839faabf0d3e33',
       1 => 
       array (
         0 => 'app\\enums\\socialservice',
@@ -127,7 +127,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Models/Account.php' => 
     array (
-      0 => 'aeb5d079774ef80e8b1d2c3de57e7818de11971c',
+      0 => '71ff81af8bf0137b9f17e676deefc486bb11348f',
       1 => 
       array (
         0 => 'app\\models\\account',
@@ -147,7 +147,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Models/Purge.php' => 
     array (
-      0 => '1f2749eeaaab5ef30120c50bff8b94debac78d9a',
+      0 => 'eb91275824ca3d0c435a370a09cdf39d4ed3fa4b',
       1 => 
       array (
         0 => 'app\\models\\purge',
@@ -167,7 +167,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Policies/PurgePolicy.php' => 
     array (
-      0 => 'aee110d6b4391a086bca17ea716c428a56bd2bb1',
+      0 => 'd8528efef0647ac0982f7c4cc257da73b634d2b8',
       1 => 
       array (
         0 => 'app\\policies\\purgepolicy',
@@ -188,7 +188,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Policies/AccountPolicy.php' => 
     array (
-      0 => 'abee68dfb3399b211a8f2df7c10951898896bc3b',
+      0 => '65237f236ed4ed5d9560a6658b9bc4cfa5dcf9d6',
       1 => 
       array (
         0 => 'app\\policies\\accountpolicy',
@@ -310,7 +310,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Livewire/Auth/Login.php' => 
     array (
-      0 => 'b25f8f5e4dacd3245090ee9acee8a23620a29ffd',
+      0 => '335c8274793cd4b7fc01ba4f681350882d7e8a89',
       1 => 
       array (
         0 => 'app\\livewire\\auth\\login',
@@ -328,7 +328,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Livewire/Auth/Register.php' => 
     array (
-      0 => 'b6ccf836cfc9846cdfed105556c3f95761d7ba34',
+      0 => '4e0a07b924b1e309e924018dd96f5d6ea120800c',
       1 => 
       array (
         0 => 'app\\livewire\\auth\\register',
@@ -405,7 +405,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php' => 
     array (
-      0 => '8b44c529674301a42109766d7e464c0ed88a2875',
+      0 => '923eeb001aa659a44b0afd5f4aea60d613b0f093',
       1 => 
       array (
         0 => 'app\\filament\\resources\\accounts\\tables\\accountstable',
@@ -438,7 +438,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Schemas/AccountForm.php' => 
     array (
-      0 => '6f6268003d58943edc61ae68568d53bc8c663b9d',
+      0 => '4f4f7d2955bb699baa9ae2be116e3f9a83209e8e',
       1 => 
       array (
         0 => 'app\\filament\\resources\\accounts\\schemas\\accountform',
@@ -453,7 +453,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php' => 
     array (
-      0 => '97476c3c6f1d2f5be12d9c7d438718a35b9d909e',
+      0 => 'b511923547bdc610d285dcfde5f7bd2d82f6ffc7',
       1 => 
       array (
         0 => 'app\\filament\\resources\\accounts\\pages\\viewaccount',
@@ -575,7 +575,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php' => 
     array (
-      0 => 'c2b497428cd4dec602b644984a34e50bc10a2f51',
+      0 => '567451f17e9aa886ea53819c208645d8d592242f',
       1 => 
       array (
         0 => 'app\\filament\\resources\\purges\\tables\\purgestable',
@@ -608,7 +608,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Schemas/PurgeForm.php' => 
     array (
-      0 => '9bfd20380dfe7567d156ed458b1af2770e7dc364',
+      0 => 'ed2cfa4df71df367b81ebfab78e240c5aae14d59',
       1 => 
       array (
         0 => 'app\\filament\\resources\\purges\\schemas\\purgeform',
@@ -638,7 +638,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php' => 
     array (
-      0 => '75608864fcf5f05da2adff665d7733656258898e',
+      0 => 'eb5f819a73dd015ea0d5f585036d219a5572c3b4',
       1 => 
       array (
         0 => 'app\\filament\\resources\\purges\\pages\\listpurges',
@@ -788,7 +788,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Http/Controllers/SocialAuthController.php' => 
     array (
-      0 => 'c9e5dba006cda2b4080a20095309d4899182d5c2',
+      0 => '2aecd6fa5cbb31f3e48e3d9c84c3d4c8f535ae78',
       1 => 
       array (
         0 => 'app\\http\\controllers\\socialauthcontroller',
@@ -805,7 +805,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Services/PurgeService.php' => 
     array (
-      0 => '6ed08cd548fa354b010e7a7c3d3bd27546e871a5',
+      0 => '23f33dc940c3bcceeeea723b4540c1f279e64020',
       1 => 
       array (
         0 => 'app\\services\\purgeservice',
@@ -824,7 +824,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php' => 
     array (
-      0 => 'b000bf4a2aea8e2dadfd4284e53245a319c81faf',
+      0 => 'fcc8aadf4f80074e5f3d535ebb40063bbd1deb20',
       1 => 
       array (
         0 => 'app\\services\\twitteraccountservice',
@@ -845,7 +845,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Console/Commands/ProcessPurgeQueue.php' => 
     array (
-      0 => 'eb6db2da74b1ff5b28c39168b34bfec3a3c17a33',
+      0 => 'daf3590e79bb028c55f2b6c6addd6af2986e1a83',
       1 => 
       array (
         0 => 'app\\console\\commands\\processpurgequeue',

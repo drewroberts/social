@@ -31,20 +31,23 @@ class AccountForm
                     ->label('Active')
                     ->disabled(),
 
-                Components\Placeholder::make('last_synced')
+                Components\TextInput::make('last_synced')
                     ->label('Last Synced')
-                    ->content(fn (Account $record): string => $record->last_synced_at?->diffForHumans() ?? 'Never'
-                    ),
+                    ->disabled()
+                    ->dehydrated(false)
+                    ->formatStateUsing(fn (Account $record): string => $record->last_synced_at?->diffForHumans() ?? 'Never'),
 
-                Components\Placeholder::make('token_status')
+                Components\TextInput::make('token_status')
                     ->label('Token Status')
-                    ->content(function (Account $record): HtmlString {
+                    ->disabled()
+                    ->dehydrated(false)
+                    ->formatStateUsing(function (Account $record): string {
                         if ($record->isTokenExpired()) {
-                            return new HtmlString('<span class="text-red-600 dark:text-red-400">Expired</span>');
+                            return 'Expired';
                         } elseif ($record->needsTokenRefresh()) {
-                            return new HtmlString('<span class="text-orange-600 dark:text-orange-400">Needs Refresh</span>');
+                            return 'Needs Refresh';
                         } else {
-                            return new HtmlString('<span class="text-green-600 dark:text-green-400">Valid</span>');
+                            return 'Valid';
                         }
                     }),
             ]);

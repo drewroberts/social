@@ -53,6 +53,8 @@ class PurgeService
             return false;
         }
 
+        /** @var Account $account */
+
         // Mark as requested before attempting
         $purge->update(['requested_at' => now()]);
 
