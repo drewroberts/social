@@ -13,7 +13,7 @@ class PurgePolicy
      */
     public function viewAny(User $user): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,7 +21,7 @@ class PurgePolicy
      */
     public function view(User $user, Purge $purge): bool
     {
-        return false;
+        return true;
     }
 
     /**

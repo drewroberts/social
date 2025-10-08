@@ -196,6 +196,68 @@ class TwitterAccountService implements SocialAccountService
     }
 
     /**
+     * Delete a tweet from Twitter.
+     * Returns true if deleted successfully or if tweet doesn't exist (404).
+     */
+    public function deleteTweet(\App\Models\Purge $purge, Account $account): bool
+    {
+        try {
+            $twitter = Twitter::usingCredentials(
+                $account->access_token,
+                $account->access_token_secret
+            );
+
+            // Attempt to delete the tweet
+            $response = $twitter->destroyTweet($purge->post_id);
+
+            // If we get a valid response, the tweet was deleted
+            if (is_object($response) && !isset($response->error)) {
+                Log::info('Tweet deleted successfully', [
+                    'post_id' => $purge->post_id,
+                    'account' => $account->username,
+                ]);
+                return true;
+            }
+
+            // Check if it's an error response
+            if (isset($response->error)) {
+                Log::warning('Twitter API error during delete', [
+                    'post_id' => $purge->post_id,
+                    'error' => $response->error,
+                ]);
+            }
+
+            return false;
+        } catch (\Atymic\Twitter\Exception\ClientException $e) {
+            // Check if it's a 404 - tweet doesn't exist (already deleted or never existed)
+            if ($e->getCode() === 404 || str_contains($e->getMessage(), '404') || str_contains($e->getMessage(), 'No status found')) {
+                Log::info('Tweet not found (404) - marking as purged', [
+                    'post_id' => $purge->post_id,
+                    'account' => $account->username,
+                ]);
+                return true;
+            }
+
+            Log::error('Twitter API exception during delete', [
+                'post_id' => $purge->post_id,
+                'account' => $account->username,
+                'error' => $e->getMessage(),
+                'code' => $e->getCode(),
+            ]);
+
+            return false;
+        } catch (\Exception $e) {
+            Log::error('Unexpected error deleting tweet', [
+                'post_id' => $purge->post_id,
+                'account' => $account->username,
+                'error' => $e->getMessage(),
+            ]);
+
+            return false;
+        }
+    }
+
+    /**
      * Revoke access and disconnect the account.
      */
     public function disconnect(Account $account): void

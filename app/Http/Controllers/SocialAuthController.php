@@ -15,6 +15,7 @@ class SocialAuthController extends Controller
      */
     public function connect(string $service)
     {
+        /** @var \App\Models\User $user */
         $user = Auth::user();
 
         try {
@@ -38,6 +39,7 @@ class SocialAuthController extends Controller
      */
     public function callback(Request $request, string $service)
     {
+        /** @var \App\Models\User $user */
         $user = Auth::user();
 
         // Check for OAuth errors
@@ -87,6 +89,7 @@ class SocialAuthController extends Controller
      */
     public function disconnect(string $service, int $accountId)
     {
+        /** @var \App\Models\User $user */
         $user = Auth::user();
         $account = $user->accounts()->findOrFail($accountId);
 
