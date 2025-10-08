@@ -6,6 +6,7 @@ use App\Contracts\SocialAccountService;
 use App\Enums\SocialService;
 use App\Models\Account;
 use App\Models\User;
+use App\Models\Purge;
 use Atymic\Twitter\Facade\Twitter;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -199,7 +200,7 @@ class TwitterAccountService implements SocialAccountService
      * Delete a tweet from Twitter.
      * Returns true if deleted successfully or if tweet doesn't exist (404).
      */
-    public function deleteTweet(\App\Models\Purge $purge, Account $account): bool
+    public function deleteTweet(Purge $purge, Account $account): bool
     {
         try {
             $twitter = Twitter::usingCredentials(
