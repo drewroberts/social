@@ -59,7 +59,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Providers/Filament/AdminPanelProvider.php' => 
     array (
-      0 => 'cd3333c382ac1982ffba1641f24d97e5b286aa6e',
+      0 => '3f14756be2a6611b89f85482b92f4fe8ed5c3788',
       1 => 
       array (
         0 => 'app\\providers\\filament\\adminpanelprovider',
@@ -623,7 +623,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ViewPurge.php' => 
     array (
-      0 => '9d9aaea627b67907060527ba670d75423e473b9e',
+      0 => '57131ec9e394715a97936c5947f401557d63e399',
       1 => 
       array (
         0 => 'app\\filament\\resources\\purges\\pages\\viewpurge',
@@ -858,25 +858,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
       ),
     ),
-    '/Users/drewroberts/Code/social/app/Filament/Widgets/PurgeBatchSaveWidget.php' => 
-    array (
-      0 => '390a4fd31b7a2270504b7dd3c8b09ac45e79a126',
-      1 => 
-      array (
-        0 => 'app\\filament\\widgets\\purgebatchsavewidget',
-      ),
-      2 => 
-      array (
-        0 => 'app\\filament\\widgets\\getsearchcount',
-        1 => 'app\\filament\\widgets\\batchsave',
-      ),
-      3 => 
-      array (
-      ),
-    ),
     '/Users/drewroberts/Code/social/app/Console/Commands/PurgeBatchSave.php' => 
     array (
-      0 => '8bd770cd8b31cfce90db086590211442f8889622',
+      0 => '0822a9632406ae696ebdd62b283aeac9ca5df9a0',
       1 => 
       array (
         0 => 'app\\console\\commands\\purgebatchsave',
@@ -891,7 +875,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Console/Commands/PurgeBatchUnsave.php' => 
     array (
-      0 => '62497ca5223af990fb6b0e1a784f5916d3c6be7e',
+      0 => '3e97477b0716a9e3b982b2b86bb35720bdd268e0',
       1 => 
       array (
         0 => 'app\\console\\commands\\purgebatchunsave',
@@ -899,6 +883,24 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       2 => 
       array (
         0 => 'app\\console\\commands\\handle',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/Users/drewroberts/Code/social/app/Filament/Widgets/PurgeBatchWidget.php' => 
+    array (
+      0 => 'cb831cd344c750fe701917330828b10c87e16c1c',
+      1 => 
+      array (
+        0 => 'app\\filament\\widgets\\purgebatchwidget',
+      ),
+      2 => 
+      array (
+        0 => 'app\\filament\\widgets\\getsearchcount',
+        1 => 'app\\filament\\widgets\\batchsave',
+        2 => 'app\\filament\\widgets\\batchunsave',
+        3 => 'app\\filament\\widgets\\executebatchoperation',
       ),
       3 => 
       array (

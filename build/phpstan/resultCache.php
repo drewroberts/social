@@ -3490,14 +3490,14 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Console/Commands/PurgeBatchSave.php' => 
   array (
-    'fileHash' => '8bd770cd8b31cfce90db086590211442f8889622',
+    'fileHash' => '0822a9632406ae696ebdd62b283aeac9ca5df9a0',
     'dependentFiles' => 
     array (
     ),
   ),
   '/Users/drewroberts/Code/social/app/Console/Commands/PurgeBatchUnsave.php' => 
   array (
-    'fileHash' => '62497ca5223af990fb6b0e1a784f5916d3c6be7e',
+    'fileHash' => '3e97477b0716a9e3b982b2b86bb35720bdd268e0',
     'dependentFiles' => 
     array (
     ),
@@ -3587,7 +3587,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ViewPurge.php' => 
   array (
-    'fileHash' => '9d9aaea627b67907060527ba670d75423e473b9e',
+    'fileHash' => '57131ec9e394715a97936c5947f401557d63e399',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/PurgeResource.php',
@@ -3668,9 +3668,9 @@ return [
       2 => '/Users/drewroberts/Code/social/app/Filament/Resources/Users/Pages/ListUsers.php',
     ),
   ),
-  '/Users/drewroberts/Code/social/app/Filament/Widgets/PurgeBatchSaveWidget.php' => 
+  '/Users/drewroberts/Code/social/app/Filament/Widgets/PurgeBatchWidget.php' => 
   array (
-    'fileHash' => '390a4fd31b7a2270504b7dd3c8b09ac45e79a126',
+    'fileHash' => 'cb831cd344c750fe701917330828b10c87e16c1c',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Providers/Filament/AdminPanelProvider.php',
@@ -3875,14 +3875,16 @@ return [
       1 => '/Users/drewroberts/Code/social/app/Console/Commands/PurgeBatchSave.php',
       2 => '/Users/drewroberts/Code/social/app/Console/Commands/PurgeBatchUnsave.php',
       3 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php',
-      4 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/PurgeResource.php',
-      5 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Schemas/PurgeForm.php',
-      6 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php',
-      7 => '/Users/drewroberts/Code/social/app/Filament/Widgets/PurgeBatchSaveWidget.php',
-      8 => '/Users/drewroberts/Code/social/app/Http/Controllers/PurgeController.php',
-      9 => '/Users/drewroberts/Code/social/app/Policies/PurgePolicy.php',
-      10 => '/Users/drewroberts/Code/social/app/Services/PurgeService.php',
-      11 => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
+      4 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ViewPurge.php',
+      5 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/PurgeResource.php',
+      6 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Schemas/PurgeForm.php',
+      7 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php',
+      8 => '/Users/drewroberts/Code/social/app/Filament/Widgets/PurgeBatchSaveWidget.php',
+      9 => '/Users/drewroberts/Code/social/app/Filament/Widgets/PurgeBatchWidget.php',
+      10 => '/Users/drewroberts/Code/social/app/Http/Controllers/PurgeController.php',
+      11 => '/Users/drewroberts/Code/social/app/Policies/PurgePolicy.php',
+      12 => '/Users/drewroberts/Code/social/app/Services/PurgeService.php',
+      13 => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
     ),
   ),
   '/Users/drewroberts/Code/social/app/Models/User.php' => 
@@ -3932,7 +3934,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Providers/Filament/AdminPanelProvider.php' => 
   array (
-    'fileHash' => 'cd3333c382ac1982ffba1641f24d97e5b286aa6e',
+    'fileHash' => '3f14756be2a6611b89f85482b92f4fe8ed5c3788',
     'dependentFiles' => 
     array (
     ),
@@ -3950,7 +3952,8 @@ return [
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Console/Commands/ProcessPurgeQueue.php',
-      1 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php',
+      1 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ViewPurge.php',
+      2 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php',
     ),
   ),
   '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php' => 
@@ -4092,7 +4095,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/routes/console.php' => 
   array (
-    'fileHash' => '777b0459d5820c5c31da0d63fba84e3b8a500a5c',
+    'fileHash' => '1770e4890bc7340f65a25a63600b4fbfb18abee7',
     'dependentFiles' => 
     array (
     ),
@@ -5714,7 +5717,26 @@ return [
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
        'name' => 'App\\Filament\\Resources\\Purges\\Pages\\ViewPurge',
-       'phpDoc' => NULL,
+       'phpDoc' => 
+      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+         'phpDocString' => '/**
+ * @property Purge $record
+ */',
+         'namespace' => 'App\\Filament\\Resources\\Purges\\Pages',
+         'uses' => 
+        array (
+          'purgeresource' => 'App\\Filament\\Resources\\Purges\\PurgeResource',
+          'purge' => 'App\\Models\\Purge',
+          'purgeservice' => 'App\\Services\\PurgeService',
+          'actions' => 'Filament\\Actions',
+          'toggle' => 'Filament\\Forms\\Components\\Toggle',
+          'notification' => 'Filament\\Notifications\\Notification',
+          'viewrecord' => 'Filament\\Resources\\Pages\\ViewRecord',
+        ),
+         'constUses' => 
+        array (
+        ),
+      )),
        'abstract' => false,
        'final' => false,
        'extends' => 'Filament\\Resources\\Pages\\ViewRecord',
@@ -6627,11 +6649,11 @@ return [
       ),
     )),
   ),
-  '/Users/drewroberts/Code/social/app/Filament/Widgets/PurgeBatchSaveWidget.php' => 
+  '/Users/drewroberts/Code/social/app/Filament/Widgets/PurgeBatchWidget.php' => 
   array (
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
-       'name' => 'App\\Filament\\Widgets\\PurgeBatchSaveWidget',
+       'name' => 'App\\Filament\\Widgets\\PurgeBatchWidget',
        'phpDoc' => NULL,
        'abstract' => false,
        'final' => false,
@@ -6723,6 +6745,81 @@ return [
           ),
         )),
         3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'operation',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'string',
+           'public' => true,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'caseSensitive',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'bool',
+           'public' => true,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'useRegex',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'bool',
+           'public' => true,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        6 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'getSearchCount',
            'phpDoc' => NULL,
@@ -6740,7 +6837,7 @@ return [
           array (
           ),
         )),
-        4 => 
+        7 => 
         \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
            'name' => 'batchSave',
            'phpDoc' => NULL,
@@ -6753,6 +6850,53 @@ return [
            'returnType' => 'void',
            'parameters' => 
           array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        8 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'batchUnsave',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        9 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'executeBatchOperation',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'operation',
+               'type' => 'string',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+            )),
           ),
            'attributes' => 
           array (
