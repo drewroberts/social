@@ -7,36 +7,36 @@ use Livewire\Livewire;
 
 uses(\Illuminate\Foundation\Testing\RefreshDatabase::class);
 
-test('password can be updated', function () {
-    $user = User::factory()->create([
-        'password' => Hash::make('password'),
-    ]);
+describe('Password Update', function () {
+    it('updates password with valid credentials', function () {
+        $user = User::factory()->create([
+            'password' => Hash::make('password'),
+        ]);
 
-    $this->actingAs($user);
+        $this->actingAs($user);
 
-    $response = Livewire::test(Password::class)
-        ->set('current_password', 'password')
-        ->set('password', 'new-password')
-        ->set('password_confirmation', 'new-password')
-        ->call('updatePassword');
+        Livewire::test(Password::class)
+            ->set('current_password', 'password')
+            ->set('password', 'new-password')
+            ->set('password_confirmation', 'new-password')
+            ->call('updatePassword')
+            ->assertHasNoErrors();
 
-    $response->assertHasNoErrors();
+        expect(Hash::check('new-password', $user->refresh()->password))->toBeTrue();
+    });
 
-    expect(Hash::check('new-password', $user->refresh()->password))->toBeTrue();
-});
+    it('requires correct current password', function () {
+        $user = User::factory()->create([
+            'password' => Hash::make('password'),
+        ]);
 
-test('correct password must be provided to update password', function () {
-    $user = User::factory()->create([
-        'password' => Hash::make('password'),
-    ]);
+        $this->actingAs($user);
 
-    $this->actingAs($user);
-
-    $response = Livewire::test(Password::class)
-        ->set('current_password', 'wrong-password')
-        ->set('password', 'new-password')
-        ->set('password_confirmation', 'new-password')
-        ->call('updatePassword');
-
-    $response->assertHasErrors(['current_password']);
+        Livewire::test(Password::class)
+            ->set('current_password', 'wrong-password')
+            ->set('password', 'new-password')
+            ->set('password_confirmation', 'new-password')
+            ->call('updatePassword')
+            ->assertHasErrors(['current_password']);
+    });
 });

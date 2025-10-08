@@ -7,74 +7,75 @@ use Livewire\Livewire;
 
 uses(\Illuminate\Foundation\Testing\RefreshDatabase::class);
 
-test('login screen can be rendered', function () {
-    $response = $this->get('/login');
-
-    $response->assertStatus(200);
+describe('Login Screen', function () {
+    it('renders successfully', function () {
+        $this->get('/login')->assertOk();
+    });
 });
 
-test('users can authenticate using the login screen', function () {
-    $user = User::factory()->withoutTwoFactor()->create();
+describe('Authentication', function () {
+    it('authenticates users with valid credentials', function () {
+        $user = User::factory()->withoutTwoFactor()->create();
 
-    $response = Livewire::test(Login::class)
-        ->set('email', $user->email)
-        ->set('password', 'password')
-        ->call('login');
+        Livewire::test(Login::class)
+            ->set('email', $user->email)
+            ->set('password', 'password')
+            ->call('login')
+            ->assertHasNoErrors()
+            ->assertRedirect(route('dashboard', absolute: false));
 
-    $response
-        ->assertHasNoErrors()
-        ->assertRedirect(route('dashboard', absolute: false));
+        $this->assertAuthenticated();
+    });
 
-    $this->assertAuthenticated();
+    it('rejects invalid passwords', function () {
+        $user = User::factory()->create();
+
+        Livewire::test(Login::class)
+            ->set('email', $user->email)
+            ->set('password', 'wrong-password')
+            ->call('login')
+            ->assertHasErrors('email');
+
+        $this->assertGuest();
+    });
+
+    it('redirects to two-factor challenge when enabled', function () {
+        if (! Features::canManageTwoFactorAuthentication()) {
+            $this->markTestSkipped('Two-factor authentication is not enabled.');
+        }
+
+        Features::twoFactorAuthentication([
+            'confirm' => true,
+            'confirmPassword' => true,
+        ]);
+
+        $user = User::factory()->create();
+
+        $user->forceFill([
+            'two_factor_secret' => encrypt('test-secret'),
+            'two_factor_recovery_codes' => encrypt(json_encode(['code1', 'code2'])),
+            'two_factor_confirmed_at' => now(),
+        ])->save();
+
+        Livewire::test('auth.login')
+            ->set('email', $user->email)
+            ->set('password', 'password')
+            ->call('login')
+            ->assertRedirect(route('two-factor.login'))
+            ->assertSessionHas('login.id', $user->id);
+
+        $this->assertGuest();
+    });
 });
 
-test('users can not authenticate with invalid password', function () {
-    $user = User::factory()->create();
+describe('Logout', function () {
+    it('logs out authenticated users', function () {
+        $user = User::factory()->create();
 
-    $response = Livewire::test(Login::class)
-        ->set('email', $user->email)
-        ->set('password', 'wrong-password')
-        ->call('login');
+        $this->actingAs($user)
+            ->post('/logout')
+            ->assertRedirect('/');
 
-    $response->assertHasErrors('email');
-
-    $this->assertGuest();
-});
-
-test('users with two factor enabled are redirected to two factor challenge', function () {
-    if (! Features::canManageTwoFactorAuthentication()) {
-        $this->markTestSkipped('Two-factor authentication is not enabled.');
-    }
-
-    Features::twoFactorAuthentication([
-        'confirm' => true,
-        'confirmPassword' => true,
-    ]);
-
-    $user = User::factory()->create();
-
-    $user->forceFill([
-        'two_factor_secret' => encrypt('test-secret'),
-        'two_factor_recovery_codes' => encrypt(json_encode(['code1', 'code2'])),
-        'two_factor_confirmed_at' => now(),
-    ])->save();
-
-    $response = Livewire::test('auth.login')
-        ->set('email', $user->email)
-        ->set('password', 'password')
-        ->call('login');
-
-    $response->assertRedirect(route('two-factor.login'));
-    $response->assertSessionHas('login.id', $user->id);
-    $this->assertGuest();
-});
-
-test('users can logout', function () {
-    $user = User::factory()->create();
-
-    $response = $this->actingAs($user)->post('/logout');
-
-    $response->assertRedirect('/');
-
-    $this->assertGuest();
+        $this->assertGuest();
+    });
 });
