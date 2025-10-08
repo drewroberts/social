@@ -11,6 +11,14 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('terms', function () {
+    return view('notices.terms');
+})->name('terms');
+
+Route::get('privacy', function () {
+    return view('notices.privacy');
+})->name('privacy');
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
