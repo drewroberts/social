@@ -44,6 +44,13 @@ Route::middleware(['auth'])->group(function () {
             ),
         )
         ->name('two-factor.show');
+
+    // Social Media Account OAuth Routes
+    Route::prefix('social')->name('social.')->group(function () {
+        Route::get('{service}/connect', [App\Http\Controllers\SocialAuthController::class, 'connect'])->name('connect');
+        Route::get('{service}/callback', [App\Http\Controllers\SocialAuthController::class, 'callback'])->name('callback');
+        Route::delete('{service}/accounts/{accountId}', [App\Http\Controllers\SocialAuthController::class, 'disconnect'])->name('disconnect');
+    });
 });
 
 require __DIR__.'/auth.php';
