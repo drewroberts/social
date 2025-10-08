@@ -22,7 +22,7 @@ class AccountsTable
                     ->label('Service')
                     ->formatStateUsing(fn (SocialService $state): string => $state->label())
                     ->icon(fn (SocialService $state): string => $state->icon())
-                    ->iconColor(fn (SocialService $state): string => match($state) {
+                    ->iconColor(fn (SocialService $state): string => match ($state) {
                         SocialService::TWITTER => 'info',
                         SocialService::FACEBOOK => 'primary',
                         SocialService::TELEGRAM => 'success',
@@ -42,8 +42,7 @@ class AccountsTable
                 Tables\Columns\TextColumn::make('token_status')
                     ->label('Token Status')
                     ->badge()
-                    ->color(fn (Account $record): string => 
-                        $record->isTokenExpired() ? 'danger' : 
+                    ->color(fn (Account $record): string => $record->isTokenExpired() ? 'danger' :
                         ($record->needsTokenRefresh() ? 'warning' : 'success')
                     )
                     ->formatStateUsing(function (Account $record): string {
@@ -88,17 +87,15 @@ class AccountsTable
 
                 Tables\Filters\Filter::make('token_expired')
                     ->label('Expired Tokens')
-                    ->query(fn (Builder $query): Builder => 
-                        $query->whereNotNull('token_expires_at')
-                              ->where('token_expires_at', '<', now())
+                    ->query(fn (Builder $query): Builder => $query->whereNotNull('token_expires_at')
+                        ->where('token_expires_at', '<', now())
                     ),
 
                 Tables\Filters\Filter::make('needs_refresh')
                     ->label('Needs Token Refresh')
-                    ->query(fn (Builder $query): Builder => 
-                        $query->whereNotNull('token_expires_at')
-                              ->where('token_expires_at', '>', now())
-                              ->where('token_expires_at', '<', now()->addDay())
+                    ->query(fn (Builder $query): Builder => $query->whereNotNull('token_expires_at')
+                        ->where('token_expires_at', '>', now())
+                        ->where('token_expires_at', '<', now()->addDay())
                     ),
             ])
             ->recordActions([
@@ -108,7 +105,7 @@ class AccountsTable
                     ->label('Reconnect')
                     ->icon('heroicon-o-arrow-path')
                     ->color('warning')
-                    ->visible(fn (Account $record): bool => !$record->is_active || $record->isTokenExpired())
+                    ->visible(fn (Account $record): bool => ! $record->is_active || $record->isTokenExpired())
                     ->url(fn (Account $record): string => route('social.connect', ['service' => $record->service->value]))
                     ->openUrlInNewTab(false),
 
@@ -118,7 +115,7 @@ class AccountsTable
                     ->color('info')
                     ->requiresConfirmation()
                     ->action(function (Account $record) {
-                        $service = match($record->service) {
+                        $service = match ($record->service) {
                             SocialService::TWITTER => app(\App\Services\TwitterAccountService::class),
                             default => throw new \Exception('Service not yet implemented'),
                         };
@@ -146,7 +143,7 @@ class AccountsTable
                     ->modalHeading('Disconnect Account')
                     ->modalDescription('Are you sure you want to disconnect this account? You can reconnect it later.')
                     ->action(function (Account $record) {
-                        $service = match($record->service) {
+                        $service = match ($record->service) {
                             SocialService::TWITTER => app(\App\Services\TwitterAccountService::class),
                             default => throw new \Exception('Service not yet implemented'),
                         };

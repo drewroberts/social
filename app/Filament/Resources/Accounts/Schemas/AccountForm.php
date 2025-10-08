@@ -33,8 +33,7 @@ class AccountForm
 
                 Components\Placeholder::make('last_synced')
                     ->label('Last Synced')
-                    ->content(fn (Account $record): string => 
-                        $record->last_synced_at?->diffForHumans() ?? 'Never'
+                    ->content(fn (Account $record): string => $record->last_synced_at?->diffForHumans() ?? 'Never'
                     ),
 
                 Components\Placeholder::make('token_status')

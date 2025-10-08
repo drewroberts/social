@@ -18,7 +18,7 @@ class ViewAccount extends ViewRecord
                 ->label('Reconnect Account')
                 ->icon('heroicon-o-arrow-path')
                 ->color('warning')
-                ->visible(fn (): bool => !$this->record->is_active || $this->record->isTokenExpired())
+                ->visible(fn (): bool => ! $this->record->is_active || $this->record->isTokenExpired())
                 ->url(fn (): string => route('social.connect', ['service' => $this->record->service->value])),
 
             Actions\Action::make('verify')
@@ -27,7 +27,7 @@ class ViewAccount extends ViewRecord
                 ->color('info')
                 ->requiresConfirmation()
                 ->action(function () {
-                    $service = match($this->record->service) {
+                    $service = match ($this->record->service) {
                         SocialService::TWITTER => app(\App\Services\TwitterAccountService::class),
                         default => throw new \Exception('Service not yet implemented'),
                     };
@@ -55,7 +55,7 @@ class ViewAccount extends ViewRecord
                 ->modalHeading('Disconnect Account')
                 ->modalDescription('Are you sure you want to disconnect this account? You can reconnect it later.')
                 ->action(function () {
-                    $service = match($this->record->service) {
+                    $service = match ($this->record->service) {
                         SocialService::TWITTER => app(\App\Services\TwitterAccountService::class),
                         default => throw new \Exception('Service not yet implemented'),
                     };

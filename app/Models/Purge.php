@@ -42,7 +42,7 @@ class Purge extends Model
     public function scopePending($query)
     {
         return $query->where('save', false)
-                     ->whereNull('requested_at');
+            ->whereNull('requested_at');
     }
 
     /**
@@ -67,7 +67,7 @@ class Purge extends Model
     public function scopeRequested($query)
     {
         return $query->whereNotNull('requested_at')
-                     ->whereNull('purged_at');
+            ->whereNull('purged_at');
     }
 
     /**

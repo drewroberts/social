@@ -44,16 +44,14 @@ class PurgeForm
 
                 Components\TextInput::make('requested_at_display')
                     ->label('Requested At')
-                    ->default(fn (?Purge $record): string => 
-                        $record?->requested_at?->diffForHumans() ?? 'Not yet requested'
+                    ->default(fn (?Purge $record): string => $record?->requested_at?->diffForHumans() ?? 'Not yet requested'
                     )
                     ->disabled()
                     ->dehydrated(false),
 
                 Components\TextInput::make('purged_at_display')
                     ->label('Purged At')
-                    ->default(fn (?Purge $record): string => 
-                        $record?->purged_at?->diffForHumans() ?? 'Not yet purged'
+                    ->default(fn (?Purge $record): string => $record?->purged_at?->diffForHumans() ?? 'Not yet purged'
                     )
                     ->disabled()
                     ->dehydrated(false),

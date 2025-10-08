@@ -23,7 +23,7 @@ enum SocialService: string
      */
     public function label(): string
     {
-        return match($this) {
+        return match ($this) {
             self::TWITTER => 'Twitter (X)',
             self::FACEBOOK => 'Facebook',
             self::TELEGRAM => 'Telegram',
@@ -35,7 +35,7 @@ enum SocialService: string
      */
     public function icon(): string
     {
-        return match($this) {
+        return match ($this) {
             self::TWITTER => 'heroicon-o-x-mark',
             self::FACEBOOK => 'heroicon-o-globe-alt',
             self::TELEGRAM => 'heroicon-o-paper-airplane',

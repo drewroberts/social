@@ -25,7 +25,7 @@ class SocialAuthController extends Controller
                 ->with('error', 'Invalid social service');
         }
 
-        return match($serviceEnum) {
+        return match ($serviceEnum) {
             SocialService::TWITTER => app(TwitterAccountService::class)->initiateOAuth($user),
             SocialService::FACEBOOK => redirect()->route('filament.admin.pages.dashboard')
                 ->with('error', 'Facebook integration coming soon'),
@@ -63,7 +63,7 @@ class SocialAuthController extends Controller
         }
 
         try {
-            $account = match($serviceEnum) {
+            $account = match ($serviceEnum) {
                 SocialService::TWITTER => app(TwitterAccountService::class)->handleCallback($request, $user),
                 SocialService::FACEBOOK => throw new \Exception('Facebook integration coming soon'),
                 SocialService::TELEGRAM => throw new \Exception('Telegram integration coming soon'),
@@ -80,7 +80,7 @@ class SocialAuthController extends Controller
             ]);
 
             return redirect()->route('filament.admin.pages.dashboard')
-                ->with('error', 'Failed to connect account: ' . $e->getMessage());
+                ->with('error', 'Failed to connect account: '.$e->getMessage());
         }
     }
 
@@ -95,8 +95,8 @@ class SocialAuthController extends Controller
 
         try {
             $serviceEnum = SocialService::from($service);
-            
-            $serviceInstance = match($serviceEnum) {
+
+            $serviceInstance = match ($serviceEnum) {
                 SocialService::TWITTER => app(TwitterAccountService::class),
                 SocialService::FACEBOOK => throw new \Exception('Facebook integration coming soon'),
                 SocialService::TELEGRAM => throw new \Exception('Telegram integration coming soon'),

@@ -159,7 +159,7 @@ describe('Purge Status', function () {
 describe('Purge Constraints', function () {
     it('enforces unique post_id', function () {
         $postId = fake()->unique()->numerify('##########');
-        
+
         Purge::factory()->create(['post_id' => $postId]);
 
         expect(fn () => Purge::factory()->create(['post_id' => $postId]))

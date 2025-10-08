@@ -5,8 +5,8 @@ namespace App\Services;
 use App\Contracts\SocialAccountService;
 use App\Enums\SocialService;
 use App\Models\Account;
-use App\Models\User;
 use App\Models\Purge;
+use App\Models\User;
 use Atymic\Twitter\Facade\Twitter;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -32,7 +32,7 @@ class TwitterAccountService implements SocialAccountService
                 Session::put('oauth_user_id', $user->id);
 
                 $url = Twitter::getAuthenticateUrl($token['oauth_token']);
-                
+
                 return redirect()->away($url);
             }
 
@@ -53,7 +53,7 @@ class TwitterAccountService implements SocialAccountService
      */
     public function handleCallback(Request $request, User $user): Account
     {
-        if (!Session::has('oauth_request_token')) {
+        if (! Session::has('oauth_request_token')) {
             throw new \Exception('Invalid OAuth session');
         }
 
@@ -65,7 +65,7 @@ class TwitterAccountService implements SocialAccountService
 
         $token = $twitter->getAccessToken($request->get('oauth_verifier'));
 
-        if (!isset($token['oauth_token'], $token['oauth_token_secret'])) {
+        if (! isset($token['oauth_token'], $token['oauth_token_secret'])) {
             throw new \Exception('Failed to get access token from Twitter');
         }
 
@@ -76,7 +76,7 @@ class TwitterAccountService implements SocialAccountService
             'skip_status' => 'true',
         ]);
 
-        if (!is_object($credentials) || isset($credentials->error)) {
+        if (! is_object($credentials) || isset($credentials->error)) {
             throw new \Exception('Failed to get Twitter user credentials');
         }
 
@@ -135,7 +135,7 @@ class TwitterAccountService implements SocialAccountService
         ];
 
         // Handle media uploads if provided
-        if (!empty($media)) {
+        if (! empty($media)) {
             $mediaIds = [];
             foreach ($media as $mediaPath) {
                 $uploadedMedia = $twitter->uploadMedia(['media' => file_get_contents($mediaPath)]);
@@ -144,7 +144,7 @@ class TwitterAccountService implements SocialAccountService
                 }
             }
 
-            if (!empty($mediaIds)) {
+            if (! empty($mediaIds)) {
                 $parameters['media_ids'] = implode(',', $mediaIds);
             }
         }
@@ -170,7 +170,7 @@ class TwitterAccountService implements SocialAccountService
 
             $credentials = $twitter->getCredentials(['skip_status' => 'true']);
 
-            if (is_object($credentials) && !isset($credentials->error)) {
+            if (is_object($credentials) && ! isset($credentials->error)) {
                 // Update metadata with fresh data
                 $account->update([
                     'metadata' => [
@@ -212,11 +212,12 @@ class TwitterAccountService implements SocialAccountService
             $response = $twitter->destroyTweet($purge->post_id);
 
             // If we get a valid response, the tweet was deleted
-            if (is_object($response) && !isset($response->error)) {
+            if (is_object($response) && ! isset($response->error)) {
                 Log::info('Tweet deleted successfully', [
                     'post_id' => $purge->post_id,
                     'account' => $account->username,
                 ]);
+
                 return true;
             }
 
@@ -236,6 +237,7 @@ class TwitterAccountService implements SocialAccountService
                     'post_id' => $purge->post_id,
                     'account' => $account->username,
                 ]);
+
                 return true;
             }
 

@@ -31,8 +31,9 @@ class ProcessPurgeQueue extends Command
         // Get the next pending purge
         $purge = $purgeService->getNextPendingPurge();
 
-        if (!$purge) {
+        if (! $purge) {
             $this->info('No pending purge requests found.');
+
             return Command::SUCCESS;
         }
 
@@ -43,10 +44,12 @@ class ProcessPurgeQueue extends Command
 
         if ($success) {
             $this->info("✓ Successfully processed purge for tweet {$purge->post_id}");
+
             return Command::SUCCESS;
         }
 
         $this->error("✗ Failed to process purge for tweet {$purge->post_id}");
+
         return Command::FAILURE;
     }
 }

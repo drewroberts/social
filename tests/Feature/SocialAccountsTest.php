@@ -23,7 +23,7 @@ describe('Social OAuth Routes', function () {
 describe('Account Relationships', function () {
     it('loads user accounts', function () {
         $user = User::factory()->create();
-        
+
         Account::factory()->create([
             'user_id' => $user->id,
             'service' => SocialService::TWITTER,
@@ -37,7 +37,7 @@ describe('Account Relationships', function () {
 
     it('filters active accounts', function () {
         $user = User::factory()->create();
-        
+
         Account::factory()->create([
             'user_id' => $user->id,
             'service' => SocialService::TWITTER,

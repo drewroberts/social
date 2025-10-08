@@ -23,7 +23,7 @@ enum AllowedEmailDomain: string
     public static function isAllowed(string $email): bool
     {
         $domain = strtolower(substr(strrchr($email, '@'), 1));
-        
+
         return in_array($domain, self::values(), true);
     }
 }

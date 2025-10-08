@@ -53,7 +53,7 @@ class Account extends Model
      */
     public function isTokenExpired(): bool
     {
-        if (!$this->token_expires_at) {
+        if (! $this->token_expires_at) {
             return false;
         }
 
@@ -65,11 +65,11 @@ class Account extends Model
      */
     public function needsTokenRefresh(): bool
     {
-        if (!$this->token_expires_at) {
+        if (! $this->token_expires_at) {
             return false;
         }
 
-        return $this->token_expires_at->isFuture() 
+        return $this->token_expires_at->isFuture()
             && $this->token_expires_at->isBefore(now()->addDay());
     }
 

@@ -1,6 +1,5 @@
 <?php
 
-use App\Console\Commands\ProcessPurgeQueue;
 use App\Enums\SocialService;
 use App\Models\Account;
 use App\Models\Purge;

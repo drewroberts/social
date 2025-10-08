@@ -3,7 +3,6 @@
 namespace App\Livewire\Auth;
 
 use App\Enums\AllowedEmailDomain;
-use App\Exceptions\UnauthorizedEmailDomainException;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
@@ -39,8 +38,9 @@ class Register extends Component
         $validated['email'] = strtolower($validated['email']);
 
         // Check if email domain is allowed
-        if (!AllowedEmailDomain::isAllowed($validated['email'])) {
+        if (! AllowedEmailDomain::isAllowed($validated['email'])) {
             $this->redirect(route('register.denied'), navigate: true);
+
             return;
         }
 

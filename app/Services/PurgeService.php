@@ -33,20 +33,23 @@ class PurgeService
         // Don't process if already requested or purged
         if ($purge->requested_at || $purge->purged_at) {
             Log::warning('Purge already processed', ['purge_id' => $purge->id]);
+
             return false;
         }
 
         // Don't process if marked as saved
         if ($purge->save) {
             Log::info('Purge skipped - marked as saved', ['purge_id' => $purge->id]);
+
             return false;
         }
 
         // Get the account to use
         $account = $purge->account ?? $this->getDefaultAccount();
 
-        if (!$account) {
+        if (! $account) {
             Log::error('No Twitter account available for purge', ['purge_id' => $purge->id]);
+
             return false;
         }
 
@@ -60,7 +63,7 @@ class PurgeService
             if ($deleted) {
                 // Mark as purged
                 $purge->update(['purged_at' => now()]);
-                
+
                 Log::info('Tweet purged successfully', [
                     'purge_id' => $purge->id,
                     'post_id' => $purge->post_id,

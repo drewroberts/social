@@ -60,7 +60,7 @@ class PurgesTable
                     })
                     ->sortable(query: function (Builder $query, string $direction): Builder {
                         return $query->orderBy('purged_at', $direction)
-                                    ->orderBy('requested_at', $direction);
+                            ->orderBy('requested_at', $direction);
                     }),
 
                 Tables\Columns\TextColumn::make('requested_at')
@@ -92,9 +92,9 @@ class PurgesTable
                     ->query(function (Builder $query, array $data): Builder {
                         return match ($data['value'] ?? null) {
                             'pending' => $query->where('save', false)
-                                              ->whereNull('requested_at'),
+                                ->whereNull('requested_at'),
                             'requested' => $query->whereNotNull('requested_at')
-                                                ->whereNull('purged_at'),
+                                ->whereNull('purged_at'),
                             'purged' => $query->whereNotNull('purged_at'),
                             'saved' => $query->where('save', true),
                             default => $query,
@@ -118,14 +118,13 @@ class PurgesTable
                     ->color(fn (Purge $record): string => $record->save ? 'danger' : 'success')
                     ->requiresConfirmation()
                     ->modalHeading(fn (Purge $record): string => $record->save ? 'Unprotect Tweet?' : 'Protect Tweet?')
-                    ->modalDescription(fn (Purge $record): string => 
-                        $record->save 
-                            ? 'This tweet will become eligible for deletion again.' 
+                    ->modalDescription(fn (Purge $record): string => $record->save
+                            ? 'This tweet will become eligible for deletion again.'
                             : 'This tweet will be protected from deletion.'
                     )
                     ->action(function (Purge $record) {
-                        $record->update(['save' => !$record->save]);
-                        
+                        $record->update(['save' => ! $record->save]);
+
                         Notification::make()
                             ->success()
                             ->title($record->save ? 'Tweet protected' : 'Tweet unprotected')
@@ -139,15 +138,15 @@ class PurgesTable
                     ->color('info')
                     ->action(function () {
                         $stats = app(PurgeService::class)->getStats();
-                        
+
                         Notification::make()
                             ->info()
                             ->title('Purge Statistics')
                             ->body(
-                                "Total: {$stats['total']}\n" .
-                                "Pending: {$stats['pending']}\n" .
-                                "Requested: {$stats['requested']}\n" .
-                                "Purged: {$stats['purged']}\n" .
+                                "Total: {$stats['total']}\n".
+                                "Pending: {$stats['pending']}\n".
+                                "Requested: {$stats['requested']}\n".
+                                "Purged: {$stats['purged']}\n".
                                 "Saved: {$stats['saved']}"
                             )
                             ->persistent()
