@@ -59,8 +59,8 @@ class TwitterAccountService implements SocialAccountService
 
         // Use stored temporary credentials to get access token
         $twitter = Twitter::usingCredentials(
-            Session::get('oauth_request_token'),
-            Session::get('oauth_request_token_secret')
+            (string) Session::get('oauth_request_token'),
+            (string) Session::get('oauth_request_token_secret')
         );
 
         $token = $twitter->getAccessToken($request->get('oauth_verifier'));
@@ -71,12 +71,13 @@ class TwitterAccountService implements SocialAccountService
 
         // Get user credentials from Twitter
         $twitter = Twitter::usingCredentials($token['oauth_token'], $token['oauth_token_secret']);
+        /** @var object{id_str: string, screen_name: string, name: string, profile_image_url_https?: string, followers_count?: int, friends_count?: int, error?: string} $credentials */
         $credentials = $twitter->getCredentials([
             'include_email' => 'true',
             'skip_status' => 'true',
         ]);
 
-        if (! is_object($credentials) || isset($credentials->error)) {
+        if (isset($credentials->error)) {
             throw new \Exception('Failed to get Twitter user credentials');
         }
 
@@ -121,12 +122,14 @@ class TwitterAccountService implements SocialAccountService
 
     /**
      * Post content to Twitter.
+     *
+     * @param  array<string>  $media
      */
     public function post(Account $account, string $content, array $media = []): mixed
     {
         $twitter = Twitter::usingCredentials(
-            $account->access_token,
-            $account->access_token_secret
+            $account->access_token ?? '',
+            $account->access_token_secret ?? ''
         );
 
         $parameters = [
@@ -165,12 +168,13 @@ class TwitterAccountService implements SocialAccountService
         try {
             $twitter = Twitter::usingCredentials(
                 $account->access_token,
-                $account->access_token_secret
+                $account->access_token_secret ?? ''
             );
 
+            /** @var object{name?: string, profile_image_url_https?: string, followers_count?: int, friends_count?: int, error?: string} $credentials */
             $credentials = $twitter->getCredentials(['skip_status' => 'true']);
 
-            if (is_object($credentials) && ! isset($credentials->error)) {
+            if (! isset($credentials->error)) {
                 // Update metadata with fresh data
                 $account->update([
                     'metadata' => [
@@ -205,7 +209,7 @@ class TwitterAccountService implements SocialAccountService
         try {
             $twitter = Twitter::usingCredentials(
                 $account->access_token,
-                $account->access_token_secret
+                $account->access_token_secret ?? ''
             );
 
             // Attempt to delete the tweet

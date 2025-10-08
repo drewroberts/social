@@ -16,13 +16,16 @@ class VerifyEmail extends Component
      */
     public function sendVerification(): void
     {
-        if (Auth::user()->hasVerifiedEmail()) {
+        /** @var \App\Models\User $user */
+        $user = Auth::user();
+
+        if ($user->hasVerifiedEmail()) {
             $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
 
             return;
         }
 
-        Auth::user()->sendEmailVerificationNotification();
+        $user->sendEmailVerificationNotification();
 
         Session::flash('status', 'verification-link-sent');
     }

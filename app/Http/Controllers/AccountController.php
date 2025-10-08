@@ -11,7 +11,7 @@ class AccountController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): void
     {
         //
     }
@@ -19,7 +19,7 @@ class AccountController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): void
     {
         //
     }
@@ -27,7 +27,7 @@ class AccountController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreAccountRequest $request)
+    public function store(StoreAccountRequest $request): void
     {
         //
     }
@@ -35,7 +35,7 @@ class AccountController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Account $account)
+    public function show(Account $account): void
     {
         //
     }
@@ -43,7 +43,7 @@ class AccountController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Account $account)
+    public function edit(Account $account): void
     {
         //
     }
@@ -51,7 +51,7 @@ class AccountController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateAccountRequest $request, Account $account)
+    public function update(UpdateAccountRequest $request, Account $account): void
     {
         //
     }
@@ -59,7 +59,7 @@ class AccountController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Account $account)
+    public function destroy(Account $account): void
     {
         //
     }

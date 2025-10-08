@@ -30,7 +30,9 @@ describe('PurgeService - Default Account', function () {
     });
 
     it('returns null when default account does not exist', function () {
+        // Create an account with ID=2 (not the default ID=1)
         Account::factory()->create([
+            'id' => 2,
             'service' => SocialService::TWITTER,
             'username' => 'other',
             'is_active' => true,

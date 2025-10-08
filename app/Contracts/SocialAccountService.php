@@ -26,6 +26,8 @@ interface SocialAccountService
 
     /**
      * Post content to the social media platform.
+     *
+     * @param  array<string>  $media
      */
     public function post(Account $account, string $content, array $media = []): mixed;
 

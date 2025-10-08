@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 return [
-	'lastFullAnalysisTime' => 1759935803,
+	'lastFullAnalysisTime' => 1759941684,
 	'meta' => array (
   'cacheVersion' => 'v12-linesToIgnore',
   'phpstanVersion' => '2.1.30',
@@ -9,7 +9,7 @@ return [
   array (
   ),
   'phpVersion' => 80405,
-  'projectConfig' => '{parameters: {level: 5, paths: [/Users/drewroberts/Code/social/app, /Users/drewroberts/Code/social/config, /Users/drewroberts/Code/social/database, /Users/drewroberts/Code/social/routes], tmpDir: /Users/drewroberts/Code/social/build/phpstan, checkOctaneCompatibility: true, checkModelProperties: true, excludePaths: {analyseAndScan: [database/factories, database/seeders], analyse: []}}}',
+  'projectConfig' => '{parameters: {level: 7, paths: [/Users/drewroberts/Code/social/app, /Users/drewroberts/Code/social/config, /Users/drewroberts/Code/social/database, /Users/drewroberts/Code/social/routes], tmpDir: /Users/drewroberts/Code/social/build/phpstan, checkOctaneCompatibility: true, checkModelProperties: true, excludePaths: {analyseAndScan: [database/factories, database/seeders], analyse: []}}}',
   'analysedPaths' => 
   array (
     0 => '/Users/drewroberts/Code/social/app',
@@ -22,7 +22,7 @@ return [
   ),
   'composerLocks' => 
   array (
-    '/Users/drewroberts/Code/social/composer.lock' => 'f103698572ead7fc09ec78eb79be05e29cf3b2f1',
+    '/Users/drewroberts/Code/social/composer.lock' => '5e5ae3c22f75624bef182327bd43c9bdb56f8e48',
   ),
   'composerInstalled' => 
   array (
@@ -2825,11 +2825,119 @@ return [
   'stubFiles' => 
   array (
   ),
-  'level' => '5',
+  'level' => '7',
 ),
 	'projectExtensionFiles' => array (
 ),
 	'errorsCallback' => static function (): array { return array (
+  '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php' => 
+  array (
+    0 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Parameter #1 $column of method Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>::where() expects array<int|model property of Illuminate\\Database\\Eloquent\\Model, mixed>|(Closure(Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>): Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>)|(Closure(Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>): void)|Illuminate\\Contracts\\Database\\Query\\Expression|model property of Illuminate\\Database\\Eloquent\\Model, \'token_expires_at\' given.',
+       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
+       'line' => 91,
+       'canBeIgnored' => true,
+       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Type #5 from the union: The given string should be a property of Illuminate\\Database\\Eloquent\\Model, token_expires_at given.',
+       'nodeLine' => 90,
+       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
+       'identifier' => 'argument.type',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    1 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Parameter #1 $column of method Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>::where() expects array<int|model property of Illuminate\\Database\\Eloquent\\Model, mixed>|(Closure(Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>): Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>)|(Closure(Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>): void)|Illuminate\\Contracts\\Database\\Query\\Expression|model property of Illuminate\\Database\\Eloquent\\Model, \'token_expires_at\' given.',
+       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
+       'line' => 97,
+       'canBeIgnored' => true,
+       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Type #5 from the union: The given string should be a property of Illuminate\\Database\\Eloquent\\Model, token_expires_at given.',
+       'nodeLine' => 96,
+       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
+       'identifier' => 'argument.type',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    2 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Parameter #1 $column of method Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>::where() expects array<int|model property of Illuminate\\Database\\Eloquent\\Model, mixed>|(Closure(Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>): Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>)|(Closure(Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>): void)|Illuminate\\Contracts\\Database\\Query\\Expression|model property of Illuminate\\Database\\Eloquent\\Model, \'token_expires_at\' given.',
+       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
+       'line' => 98,
+       'canBeIgnored' => true,
+       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Type #5 from the union: The given string should be a property of Illuminate\\Database\\Eloquent\\Model, token_expires_at given.',
+       'nodeLine' => 96,
+       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
+       'identifier' => 'argument.type',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    3 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Parameter #1 $column of method Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>::where() expects array<int|model property of Illuminate\\Database\\Eloquent\\Model, mixed>|(Closure(Illuminate\\Database\\Eloquent\\Builder): Illuminate\\Database\\Eloquent\\Builder)|(Closure(Illuminate\\Database\\Eloquent\\Builder): void)|Illuminate\\Contracts\\Database\\Query\\Expression|model property of Illuminate\\Database\\Eloquent\\Model, \'user_id\' given.',
+       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
+       'line' => 173,
+       'canBeIgnored' => true,
+       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Type #5 from the union: The given string should be a property of Illuminate\\Database\\Eloquent\\Model, user_id given.',
+       'nodeLine' => 173,
+       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
+       'identifier' => 'argument.type',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+  ),
+  '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php' => 
+  array (
+    0 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Parameter #1 $column of method Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>::where() expects array<int|model property of Illuminate\\Database\\Eloquent\\Model, mixed>|(Closure(Illuminate\\Database\\Eloquent\\Builder): Illuminate\\Database\\Eloquent\\Builder)|(Closure(Illuminate\\Database\\Eloquent\\Builder): void)|Illuminate\\Contracts\\Database\\Query\\Expression|model property of Illuminate\\Database\\Eloquent\\Model, \'save\' given.',
+       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php',
+       'line' => 94,
+       'canBeIgnored' => true,
+       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Type #5 from the union: The given string should be a property of Illuminate\\Database\\Eloquent\\Model, save given.',
+       'nodeLine' => 94,
+       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
+       'identifier' => 'argument.type',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    1 => 
+    \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Parameter #1 $column of method Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>::where() expects array<int|model property of Illuminate\\Database\\Eloquent\\Model, mixed>|(Closure(Illuminate\\Database\\Eloquent\\Builder): Illuminate\\Database\\Eloquent\\Builder)|(Closure(Illuminate\\Database\\Eloquent\\Builder): void)|Illuminate\\Contracts\\Database\\Query\\Expression|model property of Illuminate\\Database\\Eloquent\\Model, \'save\' given.',
+       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php',
+       'line' => 99,
+       'canBeIgnored' => true,
+       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Type #5 from the union: The given string should be a property of Illuminate\\Database\\Eloquent\\Model, save given.',
+       'nodeLine' => 99,
+       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
+       'identifier' => 'argument.type',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+  ),
   '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php' => 
   array (
     0 => 
@@ -2887,12 +2995,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Call to an undefined method Atymic\\Twitter\\Twitter::getCredentials().',
        'file' => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
-       'line' => 74,
+       'line' => 75,
        'canBeIgnored' => true,
        'filePath' => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 74,
+       'nodeLine' => 75,
        'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
        'identifier' => 'method.notFound',
        'metadata' => 
@@ -2904,12 +3012,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Call to an undefined method Atymic\\Twitter\\Twitter::uploadMedia().',
        'file' => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
-       'line' => 141,
+       'line' => 144,
        'canBeIgnored' => true,
        'filePath' => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 141,
+       'nodeLine' => 144,
        'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
        'identifier' => 'method.notFound',
        'metadata' => 
@@ -2921,12 +3029,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Call to an undefined method Atymic\\Twitter\\Twitter::postTweet().',
        'file' => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
-       'line' => 152,
+       'line' => 155,
        'canBeIgnored' => true,
        'filePath' => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 152,
+       'nodeLine' => 155,
        'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
        'identifier' => 'method.notFound',
        'metadata' => 
@@ -2938,12 +3046,12 @@ return [
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Call to an undefined method Atymic\\Twitter\\Twitter::getCredentials().',
        'file' => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
-       'line' => 171,
+       'line' => 175,
        'canBeIgnored' => true,
        'filePath' => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 171,
+       'nodeLine' => 175,
        'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
        'identifier' => 'method.notFound',
        'metadata' => 
@@ -2953,14 +3061,31 @@ return [
     )),
     7 => 
     \PHPStan\Analyser\Error::__set_state(array(
+       'message' => 'Access to an undefined property object{name?: string, profile_image_url_https?: string, followers_count?: int, friends_count?: int, error?: string}::$name.',
+       'file' => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
+       'line' => 181,
+       'canBeIgnored' => true,
+       'filePath' => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
+       'traitFilePath' => NULL,
+       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
+       'nodeLine' => 181,
+       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
+       'identifier' => 'property.notFound',
+       'metadata' => 
+      array (
+      ),
+       'fixedErrorDiff' => NULL,
+    )),
+    8 => 
+    \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Call to an undefined method Atymic\\Twitter\\Twitter::destroyTweet().',
        'file' => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
-       'line' => 212,
+       'line' => 216,
        'canBeIgnored' => true,
        'filePath' => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
        'traitFilePath' => NULL,
        'tip' => NULL,
-       'nodeLine' => 212,
+       'nodeLine' => 216,
        'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
        'identifier' => 'method.notFound',
        'metadata' => 
@@ -3061,102 +3186,6 @@ return [
       ),
     ),
   ),
-  '/Users/drewroberts/Code/social/app/Http/Controllers/AccountController.php' => 
-  array (
-    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
-    array (
-      0 => 
-      array (
-        0 => 'App\\Http\\Controllers\\AccountController',
-        1 => 'index',
-        2 => 'App\\Http\\Controllers\\AccountController',
-      ),
-      1 => 
-      array (
-        0 => 'App\\Http\\Controllers\\AccountController',
-        1 => 'create',
-        2 => 'App\\Http\\Controllers\\AccountController',
-      ),
-      2 => 
-      array (
-        0 => 'App\\Http\\Controllers\\AccountController',
-        1 => 'store',
-        2 => 'App\\Http\\Controllers\\AccountController',
-      ),
-      3 => 
-      array (
-        0 => 'App\\Http\\Controllers\\AccountController',
-        1 => 'show',
-        2 => 'App\\Http\\Controllers\\AccountController',
-      ),
-      4 => 
-      array (
-        0 => 'App\\Http\\Controllers\\AccountController',
-        1 => 'edit',
-        2 => 'App\\Http\\Controllers\\AccountController',
-      ),
-      5 => 
-      array (
-        0 => 'App\\Http\\Controllers\\AccountController',
-        1 => 'update',
-        2 => 'App\\Http\\Controllers\\AccountController',
-      ),
-      6 => 
-      array (
-        0 => 'App\\Http\\Controllers\\AccountController',
-        1 => 'destroy',
-        2 => 'App\\Http\\Controllers\\AccountController',
-      ),
-    ),
-  ),
-  '/Users/drewroberts/Code/social/app/Http/Controllers/PurgeController.php' => 
-  array (
-    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
-    array (
-      0 => 
-      array (
-        0 => 'App\\Http\\Controllers\\PurgeController',
-        1 => 'index',
-        2 => 'App\\Http\\Controllers\\PurgeController',
-      ),
-      1 => 
-      array (
-        0 => 'App\\Http\\Controllers\\PurgeController',
-        1 => 'create',
-        2 => 'App\\Http\\Controllers\\PurgeController',
-      ),
-      2 => 
-      array (
-        0 => 'App\\Http\\Controllers\\PurgeController',
-        1 => 'store',
-        2 => 'App\\Http\\Controllers\\PurgeController',
-      ),
-      3 => 
-      array (
-        0 => 'App\\Http\\Controllers\\PurgeController',
-        1 => 'show',
-        2 => 'App\\Http\\Controllers\\PurgeController',
-      ),
-      4 => 
-      array (
-        0 => 'App\\Http\\Controllers\\PurgeController',
-        1 => 'edit',
-        2 => 'App\\Http\\Controllers\\PurgeController',
-      ),
-      5 => 
-      array (
-        0 => 'App\\Http\\Controllers\\PurgeController',
-        1 => 'update',
-        2 => 'App\\Http\\Controllers\\PurgeController',
-      ),
-      6 => 
-      array (
-        0 => 'App\\Http\\Controllers\\PurgeController',
-        1 => 'destroy',
-        2 => 'App\\Http\\Controllers\\PurgeController',
-      ),
-    ),
-  ),
   '/Users/drewroberts/Code/social/app/Http/Requests/StoreAccountRequest.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
@@ -3237,7 +3266,7 @@ return [
       array (
         0 => 'Illuminate\\Support\\Facades\\Session',
         1 => 'invalidate',
-        2 => 17,
+        2 => 19,
       ),
     ),
   ),
@@ -3338,47 +3367,47 @@ return [
       0 => 
       array (
         0 => 'Two-Factor Authentication Enabled',
-        1 => 162,
+        1 => 180,
       ),
       1 => 
       array (
         0 => 'Two-factor authentication is now enabled. Scan the QR code or enter the setup key in your authenticator app.',
-        1 => 163,
+        1 => 181,
       ),
       2 => 
       array (
         0 => 'Close',
-        1 => 164,
+        1 => 182,
       ),
       3 => 
       array (
         0 => 'Verify Authentication Code',
-        1 => 170,
+        1 => 188,
       ),
       4 => 
       array (
         0 => 'Enter the 6-digit code from your authenticator app.',
-        1 => 171,
+        1 => 189,
       ),
       5 => 
       array (
         0 => 'Continue',
-        1 => 172,
+        1 => 190,
       ),
       6 => 
       array (
         0 => 'Enable Two-Factor Authentication',
-        1 => 177,
+        1 => 195,
       ),
       7 => 
       array (
         0 => 'To finish enabling two-factor authentication, scan the QR code or enter the setup key in your authenticator app.',
-        1 => 178,
+        1 => 196,
       ),
       8 => 
       array (
         0 => 'Continue',
-        1 => 179,
+        1 => 197,
       ),
     ),
   ),
@@ -3586,7 +3615,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Contracts/SocialAccountService.php' => 
   array (
-    'fileHash' => 'bc5797412dfeb5472a20a61db0c7d7619a0b06bf',
+    'fileHash' => '5a47f12e08612d217291e44f64d80b47a348a3de',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
@@ -3598,7 +3627,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Enums/AllowedEmailDomain.php' => 
   array (
-    'fileHash' => 'cd5bd006b888e74a38595d25aae59a0e62b706b2',
+    'fileHash' => '5223441802971692d15580de4f916622966e07d8',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Livewire/Auth/Register.php',
@@ -3645,7 +3674,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Schemas/AccountForm.php' => 
   array (
-    'fileHash' => '4f4f7d2955bb699baa9ae2be116e3f9a83209e8e',
+    'fileHash' => '0062d6c8488f68e8fe4c54a9485d6084266f5479',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/AccountResource.php',
@@ -3661,7 +3690,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php' => 
   array (
-    'fileHash' => 'eb5f819a73dd015ea0d5f585036d219a5572c3b4',
+    'fileHash' => 'dee9cf6bb090b33e793af17a2c6919fa7ff10b24',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/PurgeResource.php',
@@ -3752,14 +3781,14 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Http/Controllers/AccountController.php' => 
   array (
-    'fileHash' => '26ef73ed7b5670e00660e9db5195c0278bcb94c3',
+    'fileHash' => 'e645682e936c2129129542c21b192785203c0a97',
     'dependentFiles' => 
     array (
     ),
   ),
   '/Users/drewroberts/Code/social/app/Http/Controllers/Auth/VerifyEmailController.php' => 
   array (
-    'fileHash' => '57e8ce8bd44f3f7dcb121249446ec7869fbd47d7',
+    'fileHash' => '6cc9eaffee6aaa637af4d9f87fa3744fc260ce7f',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/routes/auth.php',
@@ -3780,14 +3809,14 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Http/Controllers/PurgeController.php' => 
   array (
-    'fileHash' => 'c155a23b75841f82a5213b1bef1c703e11fa9223',
+    'fileHash' => 'bd578156bca7a1b414c0896ef371fe63459419fc',
     'dependentFiles' => 
     array (
     ),
   ),
   '/Users/drewroberts/Code/social/app/Http/Controllers/SocialAuthController.php' => 
   array (
-    'fileHash' => '2aecd6fa5cbb31f3e48e3d9c84c3d4c8f535ae78',
+    'fileHash' => '964fbda742f062d3b46206454c32a207dcea2cad',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/routes/web.php',
@@ -3827,7 +3856,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Livewire/Actions/Logout.php' => 
   array (
-    'fileHash' => 'c23deb662e98fca0af0791b97dcedb39f0b60ce2',
+    'fileHash' => 'fe9543b019689b4a8fa205e076872705870845c8',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Livewire/Auth/VerifyEmail.php',
@@ -3861,7 +3890,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Livewire/Auth/ResetPassword.php' => 
   array (
-    'fileHash' => '91cf3c3c9ea2cd040e3b583faa6a8341264db230',
+    'fileHash' => '5d80cc51fd80d08ed26d6536200c505ac774eafd',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/routes/auth.php',
@@ -3869,7 +3898,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Livewire/Auth/VerifyEmail.php' => 
   array (
-    'fileHash' => '51a236649f7c208a23a7e2e69054d3b84c2ede74',
+    'fileHash' => 'bff000b1edd4930c6f10fbc2a0aaeb7a2d800400',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/routes/auth.php',
@@ -3885,14 +3914,14 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Livewire/Settings/DeleteUserForm.php' => 
   array (
-    'fileHash' => '1283be808307a14fe01c27e0b821c510468686e1',
+    'fileHash' => 'f031570ff8a145c694d1655c6b742f096f62cb44',
     'dependentFiles' => 
     array (
     ),
   ),
   '/Users/drewroberts/Code/social/app/Livewire/Settings/Password.php' => 
   array (
-    'fileHash' => 'a5c1050f1d20ddb87e8e9c82c68d219e0b0dd70a',
+    'fileHash' => '0527f76bfd807ffe4028b708d268ba48708a92b7',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/routes/web.php',
@@ -3900,7 +3929,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Livewire/Settings/Profile.php' => 
   array (
-    'fileHash' => '7399a5d75a8485c5c316cc9a427b5a3b76c4938b',
+    'fileHash' => '6706d82b14e6ca6ca3f7e2b686d6440f65aa95d3',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/routes/web.php',
@@ -3908,7 +3937,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Livewire/Settings/TwoFactor.php' => 
   array (
-    'fileHash' => 'bcd922b1e250bae4c455191ab5772c3a036fcbe8',
+    'fileHash' => 'f911669ebdfa567d4eb1ba6287651e0a59135142',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/routes/web.php',
@@ -3916,14 +3945,14 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Livewire/Settings/TwoFactor/RecoveryCodes.php' => 
   array (
-    'fileHash' => '76a3266ee2f26e2d3e609d8d7de97b5cab58d959',
+    'fileHash' => 'cf1a7f8bf44eb2376026d2a263814009adfddfd1',
     'dependentFiles' => 
     array (
     ),
   ),
   '/Users/drewroberts/Code/social/app/Models/Account.php' => 
   array (
-    'fileHash' => '71ff81af8bf0137b9f17e676deefc486bb11348f',
+    'fileHash' => '0d1d200153ec374fd5191cb7b9b99ac9329b38c3',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Contracts/SocialAccountService.php',
@@ -3942,7 +3971,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Models/Purge.php' => 
   array (
-    'fileHash' => 'eb91275824ca3d0c435a370a09cdf39d4ed3fa4b',
+    'fileHash' => 'dfc5bdb727297b2cb2dee3cb3de063453a0b5baf',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Console/Commands/ProcessPurgeQueue.php',
@@ -3958,7 +3987,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Models/User.php' => 
   array (
-    'fileHash' => 'c9d10e9db9d5346d014f0e9a5bd934686d161574',
+    'fileHash' => '7c83e202db73ea7682b9329ec61c01e6e787d373',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Contracts/SocialAccountService.php',
@@ -4017,7 +4046,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Services/PurgeService.php' => 
   array (
-    'fileHash' => '23f33dc940c3bcceeeea723b4540c1f279e64020',
+    'fileHash' => '4be2f286ecfb2bd4263e09c9e2187f20b27df073',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Console/Commands/ProcessPurgeQueue.php',
@@ -4026,7 +4055,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php' => 
   array (
-    'fileHash' => 'fcc8aadf4f80074e5f3d535ebb40063bbd1deb20',
+    'fileHash' => '41b650071828e7ee0f6db831dfdc7283de93eeda',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Pages/ViewAccount.php',
@@ -4037,7 +4066,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/config/app.php' => 
   array (
-    'fileHash' => 'be30e3c7d232c4616f527cdab9a00333e072d0d5',
+    'fileHash' => '248b42420be2f4010a1597761cd348f374a5acd0',
     'dependentFiles' => 
     array (
     ),
@@ -4051,14 +4080,14 @@ return [
   ),
   '/Users/drewroberts/Code/social/config/cache.php' => 
   array (
-    'fileHash' => '2b9663d1fa1e080d4c8acdfb58bb61740c6995da',
+    'fileHash' => '823c38205b463a3dffa959bcd2c0e36d7574620e',
     'dependentFiles' => 
     array (
     ),
   ),
   '/Users/drewroberts/Code/social/config/database.php' => 
   array (
-    'fileHash' => '73ceefccfc23aaec5c4bb5a6cfb5a41a17641c7e',
+    'fileHash' => '44a8213429467d1243a13b4bc56dee37fcb7f9e2',
     'dependentFiles' => 
     array (
     ),
@@ -4079,14 +4108,14 @@ return [
   ),
   '/Users/drewroberts/Code/social/config/logging.php' => 
   array (
-    'fileHash' => '183f235b749cafd7a98c96d71ab6f23853323fde',
+    'fileHash' => 'fc7c9c04d2af4faae31dad808282955eeaf6ca24',
     'dependentFiles' => 
     array (
     ),
   ),
   '/Users/drewroberts/Code/social/config/mail.php' => 
   array (
-    'fileHash' => '9deb4512c1a2d5ad4593228c435012d0704ba0f7',
+    'fileHash' => '15802196960e8e5061db3f3109caa6b792f64795',
     'dependentFiles' => 
     array (
     ),
@@ -4107,7 +4136,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/config/session.php' => 
   array (
-    'fileHash' => '5e45cc2560adfab39fa7dd2934c8eb386451ebb3',
+    'fileHash' => '1f810321a2147917f41815ac7aa13c1374f24987',
     'dependentFiles' => 
     array (
     ),
@@ -4170,7 +4199,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/routes/web.php' => 
   array (
-    'fileHash' => 'd55516471e91c9bad95ffdf09f3e0b1e5303b5e5',
+    'fileHash' => '5e4b37637cfc4920173b5c43bd0dd306d52d539e',
     'dependentFiles' => 
     array (
     ),
@@ -4492,6 +4521,8 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Post content to the social media platform.
+     *
+     * @param  array<string>  $media
      */',
              'namespace' => 'App\\Contracts',
              'uses' => 
@@ -6461,7 +6492,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'void',
            'parameters' => 
           array (
           ),
@@ -6494,7 +6525,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'void',
            'parameters' => 
           array (
           ),
@@ -6527,7 +6558,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'void',
            'parameters' => 
           array (
             0 => 
@@ -6571,7 +6602,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'void',
            'parameters' => 
           array (
             0 => 
@@ -6615,7 +6646,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'void',
            'parameters' => 
           array (
             0 => 
@@ -6659,7 +6690,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'void',
            'parameters' => 
           array (
             0 => 
@@ -6714,7 +6745,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'void',
            'parameters' => 
           array (
             0 => 
@@ -6880,7 +6911,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'void',
            'parameters' => 
           array (
           ),
@@ -6913,7 +6944,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'void',
            'parameters' => 
           array (
           ),
@@ -6946,7 +6977,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'void',
            'parameters' => 
           array (
             0 => 
@@ -6990,7 +7021,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'void',
            'parameters' => 
           array (
             0 => 
@@ -7034,7 +7065,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'void',
            'parameters' => 
           array (
             0 => 
@@ -7078,7 +7109,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'void',
            'parameters' => 
           array (
             0 => 
@@ -7133,7 +7164,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'void',
            'parameters' => 
           array (
             0 => 
@@ -7191,6 +7222,7 @@ return [
             array (
               'socialservice' => 'App\\Enums\\SocialService',
               'twitteraccountservice' => 'App\\Services\\TwitterAccountService',
+              'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
               'request' => 'Illuminate\\Http\\Request',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'log' => 'Illuminate\\Support\\Facades\\Log',
@@ -7205,7 +7237,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'Illuminate\\Http\\RedirectResponse',
            'parameters' => 
           array (
             0 => 
@@ -7237,6 +7269,7 @@ return [
             array (
               'socialservice' => 'App\\Enums\\SocialService',
               'twitteraccountservice' => 'App\\Services\\TwitterAccountService',
+              'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
               'request' => 'Illuminate\\Http\\Request',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'log' => 'Illuminate\\Support\\Facades\\Log',
@@ -7251,7 +7284,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'Illuminate\\Http\\RedirectResponse',
            'parameters' => 
           array (
             0 => 
@@ -7294,6 +7327,7 @@ return [
             array (
               'socialservice' => 'App\\Enums\\SocialService',
               'twitteraccountservice' => 'App\\Services\\TwitterAccountService',
+              'redirectresponse' => 'Illuminate\\Http\\RedirectResponse',
               'request' => 'Illuminate\\Http\\Request',
               'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'log' => 'Illuminate\\Support\\Facades\\Log',
@@ -7308,7 +7342,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => NULL,
+           'returnType' => 'Illuminate\\Http\\RedirectResponse',
            'parameters' => 
           array (
             0 => 
@@ -7731,6 +7765,8 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Log the current user out of the application.
+     *
+     * @return \\Illuminate\\Http\\RedirectResponse|\\Livewire\\Features\\SupportRedirects\\Redirector
      */',
              'namespace' => 'App\\Livewire\\Actions',
              'uses' => 
@@ -9343,6 +9379,7 @@ return [
              'uses' => 
             array (
               'exception' => 'Exception',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'confirmtwofactorauthentication' => 'Laravel\\Fortify\\Actions\\ConfirmTwoFactorAuthentication',
               'disabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\DisableTwoFactorAuthentication',
               'enabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\EnableTwoFactorAuthentication',
@@ -9394,6 +9431,7 @@ return [
              'uses' => 
             array (
               'exception' => 'Exception',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'confirmtwofactorauthentication' => 'Laravel\\Fortify\\Actions\\ConfirmTwoFactorAuthentication',
               'disabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\DisableTwoFactorAuthentication',
               'enabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\EnableTwoFactorAuthentication',
@@ -9445,6 +9483,7 @@ return [
              'uses' => 
             array (
               'exception' => 'Exception',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'confirmtwofactorauthentication' => 'Laravel\\Fortify\\Actions\\ConfirmTwoFactorAuthentication',
               'disabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\DisableTwoFactorAuthentication',
               'enabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\EnableTwoFactorAuthentication',
@@ -9485,6 +9524,7 @@ return [
              'uses' => 
             array (
               'exception' => 'Exception',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'confirmtwofactorauthentication' => 'Laravel\\Fortify\\Actions\\ConfirmTwoFactorAuthentication',
               'disabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\DisableTwoFactorAuthentication',
               'enabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\EnableTwoFactorAuthentication',
@@ -9536,6 +9576,7 @@ return [
              'uses' => 
             array (
               'exception' => 'Exception',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'confirmtwofactorauthentication' => 'Laravel\\Fortify\\Actions\\ConfirmTwoFactorAuthentication',
               'disabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\DisableTwoFactorAuthentication',
               'enabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\EnableTwoFactorAuthentication',
@@ -9576,6 +9617,7 @@ return [
              'uses' => 
             array (
               'exception' => 'Exception',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'confirmtwofactorauthentication' => 'Laravel\\Fortify\\Actions\\ConfirmTwoFactorAuthentication',
               'disabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\DisableTwoFactorAuthentication',
               'enabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\EnableTwoFactorAuthentication',
@@ -9627,6 +9669,7 @@ return [
              'uses' => 
             array (
               'exception' => 'Exception',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'confirmtwofactorauthentication' => 'Laravel\\Fortify\\Actions\\ConfirmTwoFactorAuthentication',
               'disabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\DisableTwoFactorAuthentication',
               'enabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\EnableTwoFactorAuthentication',
@@ -9662,11 +9705,14 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Get the current modal configuration state.
+     *
+     * @return array{title: string, description: string, buttonText: string}
      */',
              'namespace' => 'App\\Livewire\\Settings',
              'uses' => 
             array (
               'exception' => 'Exception',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'confirmtwofactorauthentication' => 'Laravel\\Fortify\\Actions\\ConfirmTwoFactorAuthentication',
               'disabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\DisableTwoFactorAuthentication',
               'enabletwofactorauthentication' => 'Laravel\\Fortify\\Actions\\EnableTwoFactorAuthentication',
@@ -9727,7 +9773,22 @@ return [
           array (
             0 => 'recoveryCodes',
           ),
-           'phpDoc' => NULL,
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/** @var array<int, string> */',
+             'namespace' => 'App\\Livewire\\Settings\\TwoFactor',
+             'uses' => 
+            array (
+              'exception' => 'Exception',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
+              'generatenewrecoverycodes' => 'Laravel\\Fortify\\Actions\\GenerateNewRecoveryCodes',
+              'locked' => 'Livewire\\Attributes\\Locked',
+              'component' => 'Livewire\\Component',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
            'type' => 'array',
            'public' => true,
            'private' => false,
@@ -9765,6 +9826,7 @@ return [
              'uses' => 
             array (
               'exception' => 'Exception',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'generatenewrecoverycodes' => 'Laravel\\Fortify\\Actions\\GenerateNewRecoveryCodes',
               'locked' => 'Livewire\\Attributes\\Locked',
               'component' => 'Livewire\\Component',
@@ -9799,6 +9861,7 @@ return [
              'uses' => 
             array (
               'exception' => 'Exception',
+              'auth' => 'Illuminate\\Support\\Facades\\Auth',
               'generatenewrecoverycodes' => 'Laravel\\Fortify\\Actions\\GenerateNewRecoveryCodes',
               'locked' => 'Livewire\\Attributes\\Locked',
               'component' => 'Livewire\\Component',
@@ -9916,6 +9979,8 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Get the user that owns the account.
+     *
+     * @return BelongsTo<User, $this>
      */',
              'namespace' => 'App\\Models',
              'uses' => 
@@ -10021,6 +10086,8 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Get the display name for the account.
+     *
+     * @return Attribute<string, never>
      */',
              'namespace' => 'App\\Models',
              'uses' => 
@@ -10056,6 +10123,9 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Scope to get only active accounts.
+     *
+     * @param  \\Illuminate\\Database\\Eloquent\\Builder<Account>  $query
+     * @return \\Illuminate\\Database\\Eloquent\\Builder<Account>
      */',
              'namespace' => 'App\\Models',
              'uses' => 
@@ -10102,6 +10172,9 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Scope to filter by service.
+     *
+     * @param  \\Illuminate\\Database\\Eloquent\\Builder<Account>  $query
+     * @return \\Illuminate\\Database\\Eloquent\\Builder<Account>
      */',
              'namespace' => 'App\\Models',
              'uses' => 
@@ -10235,7 +10308,9 @@ return [
            'phpDoc' => 
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
-     * Get the account that owns this purge.
+     * Get the account this purge belongs to.
+     *
+     * @return BelongsTo<Account, $this>
      */',
              'namespace' => 'App\\Models',
              'uses' => 
@@ -10269,6 +10344,9 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Scope to get pending purges (not saved, not yet requested).
+     *
+     * @param  \\Illuminate\\Database\\Eloquent\\Builder<Purge>  $query
+     * @return \\Illuminate\\Database\\Eloquent\\Builder<Purge>
      */',
              'namespace' => 'App\\Models',
              'uses' => 
@@ -10313,6 +10391,9 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Scope to get purged records.
+     *
+     * @param  \\Illuminate\\Database\\Eloquent\\Builder<Purge>  $query
+     * @return \\Illuminate\\Database\\Eloquent\\Builder<Purge>
      */',
              'namespace' => 'App\\Models',
              'uses' => 
@@ -10357,6 +10438,9 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Scope to get saved/protected tweets.
+     *
+     * @param  \\Illuminate\\Database\\Eloquent\\Builder<Purge>  $query
+     * @return \\Illuminate\\Database\\Eloquent\\Builder<Purge>
      */',
              'namespace' => 'App\\Models',
              'uses' => 
@@ -10401,6 +10485,9 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Scope to get requested but not yet purged.
+     *
+     * @param  \\Illuminate\\Database\\Eloquent\\Builder<Purge>  $query
+     * @return \\Illuminate\\Database\\Eloquent\\Builder<Purge>
      */',
              'namespace' => 'App\\Models',
              'uses' => 
@@ -10667,6 +10754,8 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Get the social media accounts connected to this user.
+     *
+     * @return \\Illuminate\\Database\\Eloquent\\Relations\\HasMany<Account, $this>
      */',
              'namespace' => 'App\\Models',
              'uses' => 
@@ -10702,6 +10791,8 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Get active social media accounts.
+     *
+     * @return \\Illuminate\\Database\\Eloquent\\Relations\\HasMany<Account, $this>
      */',
              'namespace' => 'App\\Models',
              'uses' => 
@@ -11795,7 +11886,7 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Get the default Twitter account for purging.
-     * Looks for account with username \'drewroberts\'.
+     * Returns the first connected Twitter account (ID = 1).
      */',
              'namespace' => 'App\\Services',
              'uses' => 
@@ -11910,6 +12001,8 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Get statistics about purge progress.
+     *
+     * @return array{total: int, pending: int, requested: int, purged: int, saved: int}
      */',
              'namespace' => 'App\\Services',
              'uses' => 
@@ -12136,6 +12229,8 @@ return [
           \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
              'phpDocString' => '/**
      * Post content to Twitter.
+     *
+     * @param  array<string>  $media
      */',
              'namespace' => 'App\\Services',
              'uses' => 

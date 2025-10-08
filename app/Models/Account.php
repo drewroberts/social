@@ -42,6 +42,8 @@ class Account extends Model
 
     /**
      * Get the user that owns the account.
+     *
+     * @return BelongsTo<User, $this>
      */
     public function user(): BelongsTo
     {
@@ -75,6 +77,8 @@ class Account extends Model
 
     /**
      * Get the display name for the account.
+     *
+     * @return Attribute<string, never>
      */
     protected function displayName(): Attribute
     {
@@ -85,6 +89,9 @@ class Account extends Model
 
     /**
      * Scope to get only active accounts.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder<Account>  $query
+     * @return \Illuminate\Database\Eloquent\Builder<Account>
      */
     public function scopeActive($query)
     {
@@ -93,6 +100,9 @@ class Account extends Model
 
     /**
      * Scope to filter by service.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder<Account>  $query
+     * @return \Illuminate\Database\Eloquent\Builder<Account>
      */
     public function scopeForService($query, SocialService $service)
     {

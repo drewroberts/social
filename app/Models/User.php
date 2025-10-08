@@ -62,6 +62,8 @@ class User extends Authenticatable
 
     /**
      * Get the social media accounts connected to this user.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany<Account, $this>
      */
     public function accounts()
     {
@@ -70,6 +72,8 @@ class User extends Authenticatable
 
     /**
      * Get active social media accounts.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany<Account, $this>
      */
     public function activeAccounts()
     {

@@ -105,6 +105,8 @@ class PurgeService
 
     /**
      * Get statistics about purge progress.
+     *
+     * @return array{total: int, pending: int, requested: int, purged: int, saved: int}
      */
     public function getStats(): array
     {

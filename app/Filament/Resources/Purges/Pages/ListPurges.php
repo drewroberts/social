@@ -70,7 +70,7 @@ class ListPurges extends ListRecords
                     }
 
                     // Trim whitespace from headers and convert to lowercase for comparison
-                    $headers = array_map('trim', $headers);
+                    $headers = array_map(fn ($h) => is_string($h) ? trim($h) : '', $headers);
                     $headersLower = array_map('strtolower', $headers);
 
                     // Validate headers (case-insensitive)

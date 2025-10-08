@@ -28,8 +28,10 @@ class Purge extends Model
         'save' => 'boolean',
     ];
 
-    /**
-     * Get the account that owns this purge.
+        /**
+     * Get the account this purge belongs to.
+     *
+     * @return BelongsTo<Account, $this>
      */
     public function account(): BelongsTo
     {
@@ -38,6 +40,9 @@ class Purge extends Model
 
     /**
      * Scope to get pending purges (not saved, not yet requested).
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder<Purge>  $query
+     * @return \Illuminate\Database\Eloquent\Builder<Purge>
      */
     public function scopePending($query)
     {
@@ -47,6 +52,9 @@ class Purge extends Model
 
     /**
      * Scope to get purged records.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder<Purge>  $query
+     * @return \Illuminate\Database\Eloquent\Builder<Purge>
      */
     public function scopePurged($query)
     {
@@ -55,6 +63,9 @@ class Purge extends Model
 
     /**
      * Scope to get saved/protected tweets.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder<Purge>  $query
+     * @return \Illuminate\Database\Eloquent\Builder<Purge>
      */
     public function scopeSaved($query)
     {
@@ -63,6 +74,9 @@ class Purge extends Model
 
     /**
      * Scope to get requested but not yet purged.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder<Purge>  $query
+     * @return \Illuminate\Database\Eloquent\Builder<Purge>
      */
     public function scopeRequested($query)
     {

@@ -7,7 +7,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
   array (
     '/Users/drewroberts/Code/social/app/Contracts/SocialAccountService.php' => 
     array (
-      0 => 'bc5797412dfeb5472a20a61db0c7d7619a0b06bf',
+      0 => '5a47f12e08612d217291e44f64d80b47a348a3de',
       1 => 
       array (
         0 => 'app\\contracts\\socialaccountservice',
@@ -74,7 +74,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Enums/AllowedEmailDomain.php' => 
     array (
-      0 => 'cd5bd006b888e74a38595d25aae59a0e62b706b2',
+      0 => '5223441802971692d15580de4f916622966e07d8',
       1 => 
       array (
         0 => 'app\\enums\\allowedemaildomain',
@@ -109,7 +109,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Models/User.php' => 
     array (
-      0 => 'c9d10e9db9d5346d014f0e9a5bd934686d161574',
+      0 => '7c83e202db73ea7682b9329ec61c01e6e787d373',
       1 => 
       array (
         0 => 'app\\models\\user',
@@ -127,7 +127,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Models/Account.php' => 
     array (
-      0 => '71ff81af8bf0137b9f17e676deefc486bb11348f',
+      0 => '0d1d200153ec374fd5191cb7b9b99ac9329b38c3',
       1 => 
       array (
         0 => 'app\\models\\account',
@@ -147,7 +147,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Models/Purge.php' => 
     array (
-      0 => 'eb91275824ca3d0c435a370a09cdf39d4ed3fa4b',
+      0 => 'dfc5bdb727297b2cb2dee3cb3de063453a0b5baf',
       1 => 
       array (
         0 => 'app\\models\\purge',
@@ -209,7 +209,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Livewire/Settings/TwoFactor.php' => 
     array (
-      0 => 'bcd922b1e250bae4c455191ab5772c3a036fcbe8',
+      0 => 'f911669ebdfa567d4eb1ba6287651e0a59135142',
       1 => 
       array (
         0 => 'app\\livewire\\settings\\twofactor',
@@ -232,7 +232,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Livewire/Settings/DeleteUserForm.php' => 
     array (
-      0 => '1283be808307a14fe01c27e0b821c510468686e1',
+      0 => 'f031570ff8a145c694d1655c6b742f096f62cb44',
       1 => 
       array (
         0 => 'app\\livewire\\settings\\deleteuserform',
@@ -247,7 +247,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Livewire/Settings/TwoFactor/RecoveryCodes.php' => 
     array (
-      0 => '76a3266ee2f26e2d3e609d8d7de97b5cab58d959',
+      0 => 'cf1a7f8bf44eb2376026d2a263814009adfddfd1',
       1 => 
       array (
         0 => 'app\\livewire\\settings\\twofactor\\recoverycodes',
@@ -264,7 +264,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Livewire/Settings/Password.php' => 
     array (
-      0 => 'a5c1050f1d20ddb87e8e9c82c68d219e0b0dd70a',
+      0 => '0527f76bfd807ffe4028b708d268ba48708a92b7',
       1 => 
       array (
         0 => 'app\\livewire\\settings\\password',
@@ -279,7 +279,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Livewire/Settings/Profile.php' => 
     array (
-      0 => '7399a5d75a8485c5c316cc9a427b5a3b76c4938b',
+      0 => '6706d82b14e6ca6ca3f7e2b686d6440f65aa95d3',
       1 => 
       array (
         0 => 'app\\livewire\\settings\\profile',
@@ -343,7 +343,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Livewire/Auth/ResetPassword.php' => 
     array (
-      0 => '91cf3c3c9ea2cd040e3b583faa6a8341264db230',
+      0 => '5d80cc51fd80d08ed26d6536200c505ac774eafd',
       1 => 
       array (
         0 => 'app\\livewire\\auth\\resetpassword',
@@ -359,7 +359,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Livewire/Auth/VerifyEmail.php' => 
     array (
-      0 => '51a236649f7c208a23a7e2e69054d3b84c2ede74',
+      0 => 'bff000b1edd4930c6f10fbc2a0aaeb7a2d800400',
       1 => 
       array (
         0 => 'app\\livewire\\auth\\verifyemail',
@@ -390,7 +390,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Livewire/Actions/Logout.php' => 
     array (
-      0 => 'c23deb662e98fca0af0791b97dcedb39f0b60ce2',
+      0 => 'fe9543b019689b4a8fa205e076872705870845c8',
       1 => 
       array (
         0 => 'app\\livewire\\actions\\logout',
@@ -438,7 +438,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Schemas/AccountForm.php' => 
     array (
-      0 => '4f4f7d2955bb699baa9ae2be116e3f9a83209e8e',
+      0 => '0062d6c8488f68e8fe4c54a9485d6084266f5479',
       1 => 
       array (
         0 => 'app\\filament\\resources\\accounts\\schemas\\accountform',
@@ -638,7 +638,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php' => 
     array (
-      0 => 'eb5f819a73dd015ea0d5f585036d219a5572c3b4',
+      0 => 'dee9cf6bb090b33e793af17a2c6919fa7ff10b24',
       1 => 
       array (
         0 => 'app\\filament\\resources\\purges\\pages\\listpurges',
@@ -731,7 +731,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Http/Controllers/Auth/VerifyEmailController.php' => 
     array (
-      0 => '57e8ce8bd44f3f7dcb121249446ec7869fbd47d7',
+      0 => '6cc9eaffee6aaa637af4d9f87fa3744fc260ce7f',
       1 => 
       array (
         0 => 'app\\http\\controllers\\auth\\verifyemailcontroller',
@@ -746,7 +746,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Http/Controllers/AccountController.php' => 
     array (
-      0 => '26ef73ed7b5670e00660e9db5195c0278bcb94c3',
+      0 => 'e645682e936c2129129542c21b192785203c0a97',
       1 => 
       array (
         0 => 'app\\http\\controllers\\accountcontroller',
@@ -767,7 +767,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Http/Controllers/PurgeController.php' => 
     array (
-      0 => 'c155a23b75841f82a5213b1bef1c703e11fa9223',
+      0 => 'bd578156bca7a1b414c0896ef371fe63459419fc',
       1 => 
       array (
         0 => 'app\\http\\controllers\\purgecontroller',
@@ -788,7 +788,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Http/Controllers/SocialAuthController.php' => 
     array (
-      0 => '2aecd6fa5cbb31f3e48e3d9c84c3d4c8f535ae78',
+      0 => '964fbda742f062d3b46206454c32a207dcea2cad',
       1 => 
       array (
         0 => 'app\\http\\controllers\\socialauthcontroller',
@@ -805,7 +805,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Services/PurgeService.php' => 
     array (
-      0 => '23f33dc940c3bcceeeea723b4540c1f279e64020',
+      0 => '4be2f286ecfb2bd4263e09c9e2187f20b27df073',
       1 => 
       array (
         0 => 'app\\services\\purgeservice',
@@ -824,7 +824,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php' => 
     array (
-      0 => 'fcc8aadf4f80074e5f3d535ebb40063bbd1deb20',
+      0 => '41b650071828e7ee0f6db831dfdc7283de93eeda',
       1 => 
       array (
         0 => 'app\\services\\twitteraccountservice',

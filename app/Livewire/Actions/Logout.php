@@ -9,6 +9,8 @@ class Logout
 {
     /**
      * Log the current user out of the application.
+     *
+     * @return \Illuminate\Http\RedirectResponse|\Livewire\Features\SupportRedirects\Redirector
      */
     public function __invoke()
     {

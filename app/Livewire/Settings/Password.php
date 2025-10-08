@@ -32,7 +32,10 @@ class Password extends Component
             throw $e;
         }
 
-        Auth::user()->update([
+        /** @var \App\Models\User $user */
+        $user = Auth::user();
+
+        $user->update([
             'password' => Hash::make($validated['password']),
         ]);
 

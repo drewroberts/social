@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Enums\SocialService;
 use App\Services\TwitterAccountService;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -13,7 +14,7 @@ class SocialAuthController extends Controller
     /**
      * Initiate OAuth flow for a social service.
      */
-    public function connect(string $service)
+    public function connect(string $service): RedirectResponse
     {
         /** @var \App\Models\User $user */
         $user = Auth::user();
@@ -37,7 +38,7 @@ class SocialAuthController extends Controller
     /**
      * Handle OAuth callback from social service.
      */
-    public function callback(Request $request, string $service)
+    public function callback(Request $request, string $service): RedirectResponse
     {
         /** @var \App\Models\User $user */
         $user = Auth::user();
@@ -87,7 +88,7 @@ class SocialAuthController extends Controller
     /**
      * Disconnect a social account.
      */
-    public function disconnect(string $service, int $accountId)
+    public function disconnect(string $service, int $accountId): RedirectResponse
     {
         /** @var \App\Models\User $user */
         $user = Auth::user();
