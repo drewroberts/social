@@ -40,7 +40,8 @@ class Register extends Component
 
         // Check if email domain is allowed
         if (!AllowedEmailDomain::isAllowed($validated['email'])) {
-            throw new UnauthorizedEmailDomainException();
+            $this->redirect(route('register.denied'), navigate: true);
+            return;
         }
 
         $validated['password'] = Hash::make($validated['password']);

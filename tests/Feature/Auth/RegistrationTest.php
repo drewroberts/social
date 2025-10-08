@@ -28,40 +28,52 @@ test('new users can register with allowed email domain', function () {
 });
 
 test('registration is denied for emails outside organization', function () {
-    Livewire::test(Register::class)
+    $response = Livewire::test(Register::class)
         ->set('name', 'Test User')
         ->set('email', 'test@example.com')
         ->set('password', 'password')
         ->set('password_confirmation', 'password')
         ->call('register');
-})->throws(UnauthorizedEmailDomainException::class, 'You are outside the organization');
+
+    $response->assertRedirect(route('register.denied'));
+    $this->assertGuest();
+});
 
 test('registration is denied for gmail addresses', function () {
-    Livewire::test(Register::class)
+    $response = Livewire::test(Register::class)
         ->set('name', 'Test User')
         ->set('email', 'user@gmail.com')
         ->set('password', 'password')
         ->set('password_confirmation', 'password')
         ->call('register');
-})->throws(UnauthorizedEmailDomainException::class);
+
+    $response->assertRedirect(route('register.denied'));
+    $this->assertGuest();
+});
 
 test('registration is denied for yahoo addresses', function () {
-    Livewire::test(Register::class)
+    $response = Livewire::test(Register::class)
         ->set('name', 'Test User')
         ->set('email', 'user@yahoo.com')
         ->set('password', 'password')
         ->set('password_confirmation', 'password')
         ->call('register');
-})->throws(UnauthorizedEmailDomainException::class);
+
+    $response->assertRedirect(route('register.denied'));
+    $this->assertGuest();
+});
 
 test('registration is denied for emails with similar but different domain', function () {
-    Livewire::test(Register::class)
+    $response = Livewire::test(Register::class)
         ->set('name', 'Test User')
         ->set('email', 'test@drewroberts.org')
         ->set('password', 'password')
         ->set('password_confirmation', 'password')
         ->call('register');
-})->throws(UnauthorizedEmailDomainException::class);
+
+    $response->assertRedirect(route('register.denied'));
+    $this->assertGuest();
+});
 
 test('registration works with capitalized email and stores as lowercase', function () {
     $response = Livewire::test(Register::class)
@@ -82,4 +94,13 @@ test('registration works with capitalized email and stores as lowercase', functi
         'email' => 'test.user@drewroberts.com',
         'name' => 'Test User',
     ]);
+});
+
+test('registration denied page can be rendered', function () {
+    $response = $this->get('/register/denied');
+
+    $response->assertStatus(200);
+    $response->assertSee('Registration Unavailable');
+    $response->assertSee('Access Restricted');
+    $response->assertSee('W3RD SOCIAL');
 });

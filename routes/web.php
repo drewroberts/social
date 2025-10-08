@@ -19,6 +19,10 @@ Route::get('privacy', function () {
     return view('notices.privacy');
 })->name('privacy');
 
+Route::get('register/denied', function () {
+    return view('auth.register-denied');
+})->name('register.denied');
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
