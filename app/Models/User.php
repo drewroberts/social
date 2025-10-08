@@ -59,4 +59,20 @@ class User extends Authenticatable
             ->map(fn ($word) => Str::substr($word, 0, 1))
             ->implode('');
     }
+
+    /**
+     * Get the social media accounts connected to this user.
+     */
+    public function accounts()
+    {
+        return $this->hasMany(Account::class);
+    }
+
+    /**
+     * Get active social media accounts.
+     */
+    public function activeAccounts()
+    {
+        return $this->hasMany(Account::class)->active();
+    }
 }
