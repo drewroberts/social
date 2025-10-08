@@ -28,7 +28,7 @@ class Purge extends Model
         'save' => 'boolean',
     ];
 
-        /**
+    /**
      * Get the account this purge belongs to.
      *
      * @return BelongsTo<Account, $this>

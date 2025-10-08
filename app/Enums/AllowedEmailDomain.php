@@ -23,11 +23,11 @@ enum AllowedEmailDomain: string
     public static function isAllowed(string $email): bool
     {
         $atPosition = strrchr($email, '@');
-        
+
         if ($atPosition === false) {
             return false;
         }
-        
+
         $domain = strtolower(substr($atPosition, 1));
 
         return in_array($domain, self::values(), true);
