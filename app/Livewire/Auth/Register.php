@@ -2,6 +2,8 @@
 
 namespace App\Livewire\Auth;
 
+use App\Enums\AllowedEmailDomain;
+use App\Exceptions\UnauthorizedEmailDomainException;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
@@ -29,9 +31,17 @@ class Register extends Component
     {
         $validated = $this->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
         ]);
+
+        // Convert email to lowercase
+        $validated['email'] = strtolower($validated['email']);
+
+        // Check if email domain is allowed
+        if (!AllowedEmailDomain::isAllowed($validated['email'])) {
+            throw new UnauthorizedEmailDomainException();
+        }
 
         $validated['password'] = Hash::make($validated['password']);
 
