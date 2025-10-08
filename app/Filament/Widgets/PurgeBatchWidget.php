@@ -3,23 +3,21 @@
 namespace App\Filament\Widgets;
 
 use App\Models\Purge;
-use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Widgets\Widget;
-use Illuminate\Support\Facades\DB;
 
 class PurgeBatchWidget extends Widget
 {
     protected string $view = 'filament.widgets.purge-batch-widget';
 
-    protected int | string | array $columnSpan = 'full';
+    protected int|string|array $columnSpan = 'full';
 
     public string $searchText = '';
-    
+
     public string $operation = 'save';
-    
+
     public bool $caseSensitive = false;
-    
+
     public bool $useRegex = false;
 
     public function getSearchCount(): int
@@ -34,11 +32,13 @@ class PurgeBatchWidget extends Widget
             $purges = $query->get()->filter(function ($purge) {
                 return preg_match("/{$this->searchText}/", $purge->text);
             });
+
             return $purges->count();
         } elseif ($this->caseSensitive) {
             $purges = $query->get()->filter(function ($purge) {
                 return str_contains($purge->text, $this->searchText);
             });
+
             return $purges->count();
         }
 
@@ -63,12 +63,13 @@ class PurgeBatchWidget extends Widget
                 ->title('No search text provided')
                 ->body('Please enter text to search for.')
                 ->send();
+
             return;
         }
 
         $targetSaveState = $operation === 'save' ? false : true;
         $newSaveState = $operation === 'save' ? true : false;
-        
+
         $query = Purge::where('save', $targetSaveState);
 
         if ($this->useRegex) {
@@ -90,6 +91,7 @@ class PurgeBatchWidget extends Widget
                 ->title('No purges found')
                 ->body("No {$stateDescription} purges found containing the search text.")
                 ->send();
+
             return;
         }
 

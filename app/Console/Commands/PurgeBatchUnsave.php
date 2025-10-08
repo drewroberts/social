@@ -53,6 +53,7 @@ class PurgeBatchUnsave extends Command
 
         if ($purges->isEmpty()) {
             $this->warn('No purges found matching the search criteria.');
+
             return self::SUCCESS;
         }
 
