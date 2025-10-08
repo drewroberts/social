@@ -59,7 +59,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Providers/Filament/AdminPanelProvider.php' => 
     array (
-      0 => 'fc0994571f5e37ba7411666f697dad1cba571f9e',
+      0 => 'cd3333c382ac1982ffba1641f24d97e5b286aa6e',
       1 => 
       array (
         0 => 'app\\providers\\filament\\adminpanelprovider',
@@ -74,7 +74,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Enums/AllowedEmailDomain.php' => 
     array (
-      0 => '5223441802971692d15580de4f916622966e07d8',
+      0 => '4496bbff1bfe071f9249f7584f83179d539acf75',
       1 => 
       array (
         0 => 'app\\enums\\allowedemaildomain',
@@ -147,7 +147,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/Users/drewroberts/Code/social/app/Models/Purge.php' => 
     array (
-      0 => 'dfc5bdb727297b2cb2dee3cb3de063453a0b5baf',
+      0 => '2786d4f77acc791e2a97525ee039d2b5d8fff076',
       1 => 
       array (
         0 => 'app\\models\\purge',
@@ -849,6 +849,52 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       1 => 
       array (
         0 => 'app\\console\\commands\\processpurgequeue',
+      ),
+      2 => 
+      array (
+        0 => 'app\\console\\commands\\handle',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/Users/drewroberts/Code/social/app/Filament/Widgets/PurgeBatchSaveWidget.php' => 
+    array (
+      0 => '390a4fd31b7a2270504b7dd3c8b09ac45e79a126',
+      1 => 
+      array (
+        0 => 'app\\filament\\widgets\\purgebatchsavewidget',
+      ),
+      2 => 
+      array (
+        0 => 'app\\filament\\widgets\\getsearchcount',
+        1 => 'app\\filament\\widgets\\batchsave',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/Users/drewroberts/Code/social/app/Console/Commands/PurgeBatchSave.php' => 
+    array (
+      0 => '8bd770cd8b31cfce90db086590211442f8889622',
+      1 => 
+      array (
+        0 => 'app\\console\\commands\\purgebatchsave',
+      ),
+      2 => 
+      array (
+        0 => 'app\\console\\commands\\handle',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/Users/drewroberts/Code/social/app/Console/Commands/PurgeBatchUnsave.php' => 
+    array (
+      0 => '62497ca5223af990fb6b0e1a784f5916d3c6be7e',
+      1 => 
+      array (
+        0 => 'app\\console\\commands\\purgebatchunsave',
       ),
       2 => 
       array (

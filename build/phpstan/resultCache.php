@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 return [
-	'lastFullAnalysisTime' => 1759941684,
+	'lastFullAnalysisTime' => 1759954640,
 	'meta' => array (
   'cacheVersion' => 'v12-linesToIgnore',
   'phpstanVersion' => '2.1.30',
@@ -9,7 +9,7 @@ return [
   array (
   ),
   'phpVersion' => 80405,
-  'projectConfig' => '{parameters: {level: 7, paths: [/Users/drewroberts/Code/social/app, /Users/drewroberts/Code/social/config, /Users/drewroberts/Code/social/database, /Users/drewroberts/Code/social/routes], tmpDir: /Users/drewroberts/Code/social/build/phpstan, checkOctaneCompatibility: true, checkModelProperties: true, excludePaths: {analyseAndScan: [database/factories, database/seeders], analyse: []}}}',
+  'projectConfig' => '{parameters: {level: 5, paths: [/Users/drewroberts/Code/social/app, /Users/drewroberts/Code/social/config, /Users/drewroberts/Code/social/database, /Users/drewroberts/Code/social/routes], tmpDir: /Users/drewroberts/Code/social/build/phpstan, checkOctaneCompatibility: true, checkModelProperties: true, excludePaths: {analyseAndScan: [database/factories, database/seeders], analyse: []}}}',
   'analysedPaths' => 
   array (
     0 => '/Users/drewroberts/Code/social/app',
@@ -2825,119 +2825,11 @@ return [
   'stubFiles' => 
   array (
   ),
-  'level' => '7',
+  'level' => '5',
 ),
 	'projectExtensionFiles' => array (
 ),
 	'errorsCallback' => static function (): array { return array (
-  '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php' => 
-  array (
-    0 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Parameter #1 $column of method Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>::where() expects array<int|model property of Illuminate\\Database\\Eloquent\\Model, mixed>|(Closure(Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>): Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>)|(Closure(Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>): void)|Illuminate\\Contracts\\Database\\Query\\Expression|model property of Illuminate\\Database\\Eloquent\\Model, \'token_expires_at\' given.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
-       'line' => 91,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Type #5 from the union: The given string should be a property of Illuminate\\Database\\Eloquent\\Model, token_expires_at given.',
-       'nodeLine' => 90,
-       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
-       'identifier' => 'argument.type',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    1 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Parameter #1 $column of method Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>::where() expects array<int|model property of Illuminate\\Database\\Eloquent\\Model, mixed>|(Closure(Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>): Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>)|(Closure(Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>): void)|Illuminate\\Contracts\\Database\\Query\\Expression|model property of Illuminate\\Database\\Eloquent\\Model, \'token_expires_at\' given.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
-       'line' => 97,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Type #5 from the union: The given string should be a property of Illuminate\\Database\\Eloquent\\Model, token_expires_at given.',
-       'nodeLine' => 96,
-       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
-       'identifier' => 'argument.type',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    2 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Parameter #1 $column of method Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>::where() expects array<int|model property of Illuminate\\Database\\Eloquent\\Model, mixed>|(Closure(Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>): Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>)|(Closure(Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>): void)|Illuminate\\Contracts\\Database\\Query\\Expression|model property of Illuminate\\Database\\Eloquent\\Model, \'token_expires_at\' given.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
-       'line' => 98,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Type #5 from the union: The given string should be a property of Illuminate\\Database\\Eloquent\\Model, token_expires_at given.',
-       'nodeLine' => 96,
-       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
-       'identifier' => 'argument.type',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    3 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Parameter #1 $column of method Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>::where() expects array<int|model property of Illuminate\\Database\\Eloquent\\Model, mixed>|(Closure(Illuminate\\Database\\Eloquent\\Builder): Illuminate\\Database\\Eloquent\\Builder)|(Closure(Illuminate\\Database\\Eloquent\\Builder): void)|Illuminate\\Contracts\\Database\\Query\\Expression|model property of Illuminate\\Database\\Eloquent\\Model, \'user_id\' given.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
-       'line' => 173,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Accounts/Tables/AccountsTable.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Type #5 from the union: The given string should be a property of Illuminate\\Database\\Eloquent\\Model, user_id given.',
-       'nodeLine' => 173,
-       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
-       'identifier' => 'argument.type',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-  ),
-  '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php' => 
-  array (
-    0 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Parameter #1 $column of method Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>::where() expects array<int|model property of Illuminate\\Database\\Eloquent\\Model, mixed>|(Closure(Illuminate\\Database\\Eloquent\\Builder): Illuminate\\Database\\Eloquent\\Builder)|(Closure(Illuminate\\Database\\Eloquent\\Builder): void)|Illuminate\\Contracts\\Database\\Query\\Expression|model property of Illuminate\\Database\\Eloquent\\Model, \'save\' given.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php',
-       'line' => 94,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Type #5 from the union: The given string should be a property of Illuminate\\Database\\Eloquent\\Model, save given.',
-       'nodeLine' => 94,
-       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
-       'identifier' => 'argument.type',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    1 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Parameter #1 $column of method Illuminate\\Database\\Eloquent\\Builder<Illuminate\\Database\\Eloquent\\Model>::where() expects array<int|model property of Illuminate\\Database\\Eloquent\\Model, mixed>|(Closure(Illuminate\\Database\\Eloquent\\Builder): Illuminate\\Database\\Eloquent\\Builder)|(Closure(Illuminate\\Database\\Eloquent\\Builder): void)|Illuminate\\Contracts\\Database\\Query\\Expression|model property of Illuminate\\Database\\Eloquent\\Model, \'save\' given.',
-       'file' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php',
-       'line' => 99,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Type #5 from the union: The given string should be a property of Illuminate\\Database\\Eloquent\\Model, save given.',
-       'nodeLine' => 99,
-       'nodeType' => 'PhpParser\\Node\\Expr\\MethodCall',
-       'identifier' => 'argument.type',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-  ),
   '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php' => 
   array (
     0 => 
@@ -3060,23 +2952,6 @@ return [
        'fixedErrorDiff' => NULL,
     )),
     7 => 
-    \PHPStan\Analyser\Error::__set_state(array(
-       'message' => 'Access to an undefined property object{name?: string, profile_image_url_https?: string, followers_count?: int, friends_count?: int, error?: string}::$name.',
-       'file' => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
-       'line' => 181,
-       'canBeIgnored' => true,
-       'filePath' => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
-       'traitFilePath' => NULL,
-       'tip' => 'Learn more: <fg=cyan>https://phpstan.org/blog/solving-phpstan-access-to-undefined-property</>',
-       'nodeLine' => 181,
-       'nodeType' => 'PhpParser\\Node\\Expr\\PropertyFetch',
-       'identifier' => 'property.notFound',
-       'metadata' => 
-      array (
-      ),
-       'fixedErrorDiff' => NULL,
-    )),
-    8 => 
     \PHPStan\Analyser\Error::__set_state(array(
        'message' => 'Call to an undefined method Atymic\\Twitter\\Twitter::destroyTweet().',
        'file' => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
@@ -3613,6 +3488,20 @@ return [
     array (
     ),
   ),
+  '/Users/drewroberts/Code/social/app/Console/Commands/PurgeBatchSave.php' => 
+  array (
+    'fileHash' => '8bd770cd8b31cfce90db086590211442f8889622',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  '/Users/drewroberts/Code/social/app/Console/Commands/PurgeBatchUnsave.php' => 
+  array (
+    'fileHash' => '62497ca5223af990fb6b0e1a784f5916d3c6be7e',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
   '/Users/drewroberts/Code/social/app/Contracts/SocialAccountService.php' => 
   array (
     'fileHash' => '5a47f12e08612d217291e44f64d80b47a348a3de',
@@ -3627,7 +3516,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Enums/AllowedEmailDomain.php' => 
   array (
-    'fileHash' => '5223441802971692d15580de4f916622966e07d8',
+    'fileHash' => '4496bbff1bfe071f9249f7584f83179d539acf75',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Livewire/Auth/Register.php',
@@ -3777,6 +3666,14 @@ return [
       0 => '/Users/drewroberts/Code/social/app/Filament/Resources/Users/Pages/CreateUser.php',
       1 => '/Users/drewroberts/Code/social/app/Filament/Resources/Users/Pages/EditUser.php',
       2 => '/Users/drewroberts/Code/social/app/Filament/Resources/Users/Pages/ListUsers.php',
+    ),
+  ),
+  '/Users/drewroberts/Code/social/app/Filament/Widgets/PurgeBatchSaveWidget.php' => 
+  array (
+    'fileHash' => '390a4fd31b7a2270504b7dd3c8b09ac45e79a126',
+    'dependentFiles' => 
+    array (
+      0 => '/Users/drewroberts/Code/social/app/Providers/Filament/AdminPanelProvider.php',
     ),
   ),
   '/Users/drewroberts/Code/social/app/Http/Controllers/AccountController.php' => 
@@ -3971,18 +3868,21 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Models/Purge.php' => 
   array (
-    'fileHash' => 'dfc5bdb727297b2cb2dee3cb3de063453a0b5baf',
+    'fileHash' => '2786d4f77acc791e2a97525ee039d2b5d8fff076',
     'dependentFiles' => 
     array (
       0 => '/Users/drewroberts/Code/social/app/Console/Commands/ProcessPurgeQueue.php',
-      1 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php',
-      2 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/PurgeResource.php',
-      3 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Schemas/PurgeForm.php',
-      4 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php',
-      5 => '/Users/drewroberts/Code/social/app/Http/Controllers/PurgeController.php',
-      6 => '/Users/drewroberts/Code/social/app/Policies/PurgePolicy.php',
-      7 => '/Users/drewroberts/Code/social/app/Services/PurgeService.php',
-      8 => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
+      1 => '/Users/drewroberts/Code/social/app/Console/Commands/PurgeBatchSave.php',
+      2 => '/Users/drewroberts/Code/social/app/Console/Commands/PurgeBatchUnsave.php',
+      3 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Pages/ListPurges.php',
+      4 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/PurgeResource.php',
+      5 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Schemas/PurgeForm.php',
+      6 => '/Users/drewroberts/Code/social/app/Filament/Resources/Purges/Tables/PurgesTable.php',
+      7 => '/Users/drewroberts/Code/social/app/Filament/Widgets/PurgeBatchSaveWidget.php',
+      8 => '/Users/drewroberts/Code/social/app/Http/Controllers/PurgeController.php',
+      9 => '/Users/drewroberts/Code/social/app/Policies/PurgePolicy.php',
+      10 => '/Users/drewroberts/Code/social/app/Services/PurgeService.php',
+      11 => '/Users/drewroberts/Code/social/app/Services/TwitterAccountService.php',
     ),
   ),
   '/Users/drewroberts/Code/social/app/Models/User.php' => 
@@ -4032,7 +3932,7 @@ return [
   ),
   '/Users/drewroberts/Code/social/app/Providers/Filament/AdminPanelProvider.php' => 
   array (
-    'fileHash' => 'fc0994571f5e37ba7411666f697dad1cba571f9e',
+    'fileHash' => 'cd3333c382ac1982ffba1641f24d97e5b286aa6e',
     'dependentFiles' => 
     array (
     ),
@@ -4346,6 +4246,286 @@ return [
               array (
               ),
             )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/drewroberts/Code/social/app/Console/Commands/PurgeBatchSave.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Console\\Commands\\PurgeBatchSave',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Console\\Command',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'signature',
+          ),
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */',
+             'namespace' => 'App\\Console\\Commands',
+             'uses' => 
+            array (
+              'purge' => 'App\\Models\\Purge',
+              'command' => 'Illuminate\\Console\\Command',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'type' => NULL,
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'description',
+          ),
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * The console command description.
+     *
+     * @var string
+     */',
+             'namespace' => 'App\\Console\\Commands',
+             'uses' => 
+            array (
+              'purge' => 'App\\Models\\Purge',
+              'command' => 'Illuminate\\Console\\Command',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'type' => NULL,
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'handle',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Execute the console command.
+     */',
+             'namespace' => 'App\\Console\\Commands',
+             'uses' => 
+            array (
+              'purge' => 'App\\Models\\Purge',
+              'command' => 'Illuminate\\Console\\Command',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/drewroberts/Code/social/app/Console/Commands/PurgeBatchUnsave.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Console\\Commands\\PurgeBatchUnsave',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Console\\Command',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'signature',
+          ),
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */',
+             'namespace' => 'App\\Console\\Commands',
+             'uses' => 
+            array (
+              'purge' => 'App\\Models\\Purge',
+              'command' => 'Illuminate\\Console\\Command',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'type' => NULL,
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'description',
+          ),
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * The console command description.
+     *
+     * @var string
+     */',
+             'namespace' => 'App\\Console\\Commands',
+             'uses' => 
+            array (
+              'purge' => 'App\\Models\\Purge',
+              'command' => 'Illuminate\\Console\\Command',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'type' => NULL,
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'handle',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * Execute the console command.
+     */',
+             'namespace' => 'App\\Console\\Commands',
+             'uses' => 
+            array (
+              'purge' => 'App\\Models\\Purge',
+              'command' => 'Illuminate\\Console\\Command',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
           ),
            'attributes' => 
           array (
@@ -6434,6 +6614,143 @@ return [
            'final' => false,
            'static' => true,
            'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/Users/drewroberts/Code/social/app/Filament/Widgets/PurgeBatchSaveWidget.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Filament\\Widgets\\PurgeBatchSaveWidget',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Filament\\Widgets\\Widget',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'view',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'string',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'columnSpan',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'int|string|array',
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'searchText',
+          ),
+           'phpDoc' => NULL,
+           'type' => 'string',
+           'public' => true,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'getSearchCount',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'int',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'batchSave',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
            'parameters' => 
           array (
           ),
