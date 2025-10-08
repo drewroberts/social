@@ -15,12 +15,12 @@ class PurgeService
 
     /**
      * Get the default Twitter account for purging.
-     * Looks for account with username 'drewroberts'.
+     * Returns the first connected Twitter account (ID = 1).
      */
     public function getDefaultAccount(): ?Account
     {
         return Account::where('service', SocialService::TWITTER)
-            ->where('username', 'drewroberts')
+            ->where('id', 1)
             ->where('is_active', true)
             ->first();
     }
