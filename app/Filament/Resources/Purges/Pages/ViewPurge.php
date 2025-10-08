@@ -6,7 +6,6 @@ use App\Filament\Resources\Purges\PurgeResource;
 use App\Models\Purge;
 use App\Services\PurgeService;
 use Filament\Actions;
-use Filament\Forms\Components\Toggle;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\ViewRecord;
 
@@ -26,19 +25,19 @@ class ViewPurge extends ViewRecord
                 ->color(fn () => $this->record->save ? 'warning' : 'primary')
                 ->requiresConfirmation()
                 ->modalHeading(fn () => $this->record->save ? 'Mark Tweet as Unsaved?' : 'Mark Tweet as Saved?')
-                ->modalDescription(fn () => $this->record->save 
-                    ? 'This will allow the tweet to be deleted during the next purge cycle.' 
+                ->modalDescription(fn () => $this->record->save
+                    ? 'This will allow the tweet to be deleted during the next purge cycle.'
                     : 'This will protect the tweet from being deleted.'
                 )
                 ->action(function () {
-                    $this->record->update(['save' => !$this->record->save]);
-                    
+                    $this->record->update(['save' => ! $this->record->save]);
+
                     Notification::make()
                         ->success()
                         ->title($this->record->save ? 'Tweet marked as saved' : 'Tweet marked as unsaved')
                         ->send();
                 }),
-            
+
             Actions\Action::make('manualPurge')
                 ->label('Delete Tweet Now')
                 ->icon('heroicon-o-trash')
@@ -49,7 +48,7 @@ class ViewPurge extends ViewRecord
                 ->hidden(fn () => $this->record->save || $this->record->purged_at)
                 ->action(function (PurgeService $purgeService) {
                     $success = $purgeService->processPurge($this->record);
-                    
+
                     if ($success) {
                         Notification::make()
                             ->success()
@@ -64,7 +63,7 @@ class ViewPurge extends ViewRecord
                             ->send();
                     }
                 }),
-            
+
             Actions\EditAction::make(),
         ];
     }
