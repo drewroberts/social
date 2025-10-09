@@ -100,4 +100,11 @@ class ViewPurge extends ViewRecord
             Actions\EditAction::make(),
         ];
     }
+
+    protected function getFooterWidgets(): array
+    {
+        return [
+            ViewPurge\Widgets\ViewPostWidget::class,
+        ];
+    }
 }
