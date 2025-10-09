@@ -49,17 +49,17 @@ class ViewPurge extends ViewRecord
                 ->action(function (PurgeService $purgeService) {
                     // Refresh the record to get latest state
                     $this->record->refresh();
-                    
+
                     $account = $this->record->account ?? $purgeService->getDefaultAccount();
-                    
-                    if (!$account) {
+
+                    if (! $account) {
                         throw new \RuntimeException(
-                            "No Twitter account available for deletion. " .
-                            "Tweet ID: {$this->record->post_id}. " .
-                            "Please ensure a Twitter account is connected and active."
+                            'No Twitter account available for deletion. '.
+                            "Tweet ID: {$this->record->post_id}. ".
+                            'Please ensure a Twitter account is connected and active.'
                         );
                     }
-                    
+
                     $success = $purgeService->processPurge($this->record);
 
                     if ($success) {
@@ -71,28 +71,28 @@ class ViewPurge extends ViewRecord
                     } else {
                         // Refresh to get updated timestamps
                         $this->record->refresh();
-                        
+
                         throw new \RuntimeException(
-                            "Failed to delete tweet from Twitter API. " .
-                            "\n\n**Tweet Details:**\n" .
-                            "- Tweet ID: `{$this->record->post_id}`\n" .
-                            "- Status: `{$this->record->status}`\n" .
-                            "- Save Flag: `" . ($this->record->save ? 'true' : 'false') . "`\n" .
-                            "- Requested At: `" . ($this->record->requested_at?->toDateTimeString() ?? 'null') . "`\n" .
-                            "- Purged At: `" . ($this->record->purged_at?->toDateTimeString() ?? 'null') . "`\n" .
-                            "\n**Account Details:**\n" .
-                            "- Username: `" . ($account->username ?? 'unknown') . "`\n" .
-                            "- Account ID: `" . ($account->id ?? 'unknown') . "`\n" .
-                            "- Active: `" . ($account->is_active ? 'true' : 'false') . "`\n" .
-                            "- Has Access Token: `" . ($account->access_token ? 'yes' : 'no') . "`\n" .
-                            "- Has Secret: `" . ($account->access_token_secret ? 'yes' : 'no') . "`\n" .
-                            "\n**Possible Causes:**\n" .
-                            "- Tweet may have already been deleted\n" .
-                            "- Invalid or expired Twitter API credentials\n" .
-                            "- Twitter API rate limit exceeded\n" .
-                            "- Network or API connectivity issues\n" .
-                            "\n**Next Steps:**\n" .
-                            "Check `storage/logs/laravel.log` for detailed error messages from the Twitter API."
+                            'Failed to delete tweet from Twitter API. '.
+                            "\n\n**Tweet Details:**\n".
+                            "- Tweet ID: `{$this->record->post_id}`\n".
+                            "- Status: `{$this->record->status}`\n".
+                            '- Save Flag: `'.($this->record->save ? 'true' : 'false')."`\n".
+                            '- Requested At: `'.($this->record->requested_at?->toDateTimeString() ?? 'null')."`\n".
+                            '- Purged At: `'.($this->record->purged_at?->toDateTimeString() ?? 'null')."`\n".
+                            "\n**Account Details:**\n".
+                            '- Username: `'.($account->username ?? 'unknown')."`\n".
+                            '- Account ID: `'.($account->id ?? 'unknown')."`\n".
+                            '- Active: `'.($account->is_active ? 'true' : 'false')."`\n".
+                            '- Has Access Token: `'.($account->access_token ? 'yes' : 'no')."`\n".
+                            '- Has Secret: `'.($account->access_token_secret ? 'yes' : 'no')."`\n".
+                            "\n**Possible Causes:**\n".
+                            "- Tweet may have already been deleted\n".
+                            "- Invalid or expired Twitter API credentials\n".
+                            "- Twitter API rate limit exceeded\n".
+                            "- Network or API connectivity issues\n".
+                            "\n**Next Steps:**\n".
+                            'Check `storage/logs/laravel.log` for detailed error messages from the Twitter API.'
                         );
                     }
                 }),
