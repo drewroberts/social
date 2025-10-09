@@ -104,7 +104,7 @@ class ViewPurge extends ViewRecord
     protected function getFooterWidgets(): array
     {
         return [
-            ViewPurge\Widgets\ViewPostWidget::class,
+            ViewPurge\Widgets\VisitTweetWidget::class,
         ];
     }
 }
