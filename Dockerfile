@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y git zip libicu-dev libzip-dev && \
     docker-php-ext-install intl zip && \
     rm -rf /var/lib/apt/lists/*
 COPY --from=composer:2.7 /usr/bin/composer /usr/bin/composer
-COPY composer.json composer.lock artisan ./
+COPY composer.json composer.lock ./
 RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --no-interaction --no-scripts
 
 FROM node:22-alpine AS assets
@@ -40,7 +40,8 @@ COPY . .
 RUN mkdir -p storage/framework/{sessions,views,cache} storage/logs bootstrap/cache && \
     chown -R www-data:www-data storage bootstrap/cache && \
     chmod -R 775 storage bootstrap/cache && \
-    COMPOSER_ALLOW_SUPERUSER=1 composer dump-autoload --optimize --classmap-authoritative
+    COMPOSER_ALLOW_SUPERUSER=1 composer dump-autoload --optimize --classmap-authoritative && \
+    COMPOSER_ALLOW_SUPERUSER=1 composer run-script post-autoload-dump
 
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
