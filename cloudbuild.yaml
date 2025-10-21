@@ -2,10 +2,16 @@
 # This file enables automated builds and deployments via Cloud Build
 
 steps:
+  # Step 0: Configure git to use main as default branch
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['config', '--global', 'init.defaultBranch', 'main']
+    id: 'configure-git'
+
   # Step 1: Build the Docker image (includes npm build inside Dockerfile)
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/dr3w-social:$BUILD_ID', '-t', 'gcr.io/$PROJECT_ID/dr3w-social:latest', '.']
     id: 'build-image'
+    waitFor: ['configure-git']
 
   # Step 3: Push the Docker image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
