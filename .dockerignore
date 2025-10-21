@@ -71,9 +71,6 @@ Thumbs.db
 # CI/CD (we'll copy what we need explicitly)
 .editorconfig
 
-# But keep docker configuration
-!docker/
-
 # NPM/Node
 npm-debug.log
 yarn-error.log
