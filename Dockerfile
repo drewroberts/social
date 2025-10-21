@@ -4,9 +4,24 @@
 # ============================================
 # PHP Dependencies Stage
 # ============================================
-FROM composer:2.7 AS php-deps
+FROM php:8.4-cli AS php-deps
 
 WORKDIR /app
+
+# Install system dependencies and PHP extensions needed for Composer
+RUN apt-get update && apt-get install -y \
+    git \
+    zip \
+    unzip \
+    libicu-dev \
+    libzip-dev \
+    && docker-php-ext-install intl zip \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Composer
+COPY --from=composer:2.7 /usr/bin/composer /usr/bin/composer
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
 # Copy composer files
 COPY composer.json composer.lock ./
@@ -16,7 +31,6 @@ RUN composer install \
     --no-dev \
     --no-interaction \
     --no-scripts \
-    --no-suggest \
     --prefer-dist \
     --optimize-autoloader \
     --classmap-authoritative
