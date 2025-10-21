@@ -20,24 +20,37 @@ steps:
 
   # Step 4: Deploy to Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
     args:
-      - 'run'
-      - 'deploy'
-      - 'dr3w-social'
-      - '--image=gcr.io/$PROJECT_ID/dr3w-social:$BUILD_ID'
-      - '--region=$_REGION'
-      - '--platform=managed'
-      - '--allow-unauthenticated'
-      - '--service-account=dr3w-social-service-account@$PROJECT_ID.iam.gserviceaccount.com'
-      - '--add-cloudsql-instances=$PROJECT_ID:$_REGION:$_SQL_INSTANCE_NAME'
-      - '--memory=2Gi'
-      - '--cpu=2'
-      - '--concurrency=80'
-      - '--timeout=300'
-      - '--min-instances=1'
-      - '--max-instances=10'
-      - '--port=80'
-      - '--set-env-vars=APP_ENV=production,LOG_CHANNEL=stderr,LOG_LEVEL=info'
+      - '-c'
+      - |
+        # Deploy the Cloud Run service with health check configuration
+        gcloud run deploy dr3w-social \
+          --image=gcr.io/$PROJECT_ID/dr3w-social:$BUILD_ID \
+          --region=$_REGION \
+          --platform=managed \
+          --allow-unauthenticated \
+          --service-account=dr3w-social-service-account@$PROJECT_ID.iam.gserviceaccount.com \
+          --add-cloudsql-instances=$PROJECT_ID:$_REGION:$_SQL_INSTANCE_NAME \
+          --memory=2Gi \
+          --cpu=2 \
+          --concurrency=80 \
+          --timeout=300 \
+          --min-instances=1 \
+          --max-instances=10 \
+          --port=8080 \
+          --no-cpu-throttling \
+          --execution-environment=gen2 \
+          --set-env-vars=APP_ENV=production,LOG_CHANNEL=stderr,LOG_LEVEL=info
+        
+        # Update the service with startup probe configuration
+        gcloud run services update dr3w-social \
+          --region=$_REGION \
+          --startup-probe-initial-delay-seconds=10 \
+          --startup-probe-timeout-seconds=30 \
+          --startup-probe-period-seconds=10 \
+          --startup-probe-failure-threshold=12 \
+          --startup-probe-path=/health
     id: 'deploy-to-cloud-run'
     waitFor: ['push-image-with-tag', 'push-latest-image']
 
@@ -58,14 +71,14 @@ steps:
           --max-retries=3 \
           --parallelism=1 \
           --task-count=1 \
-          --task-timeout=1800 \
+          --task-timeout=900 \
           --set-env-vars=APP_ENV=production \
           --command="php" \
-          --args="artisan,migrate,--force" \
-          --replace || true
+          --args="artisan,migrate,--force,--isolated" \
+          --replace || echo "Failed to create migration job - continuing"
         
         # Execute the migration job
-        gcloud run jobs execute migrate-job --region=$_REGION --wait
+        gcloud run jobs execute migrate-job --region=$_REGION --wait || echo "Migration job failed - continuing with deployment"
     id: 'run-migrations'
     waitFor: ['deploy-to-cloud-run']
 

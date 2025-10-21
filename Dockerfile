@@ -26,9 +26,11 @@ RUN apt-get update && apt-get install -y curl zip git libpng-dev libicu-dev libz
     rm -rf /var/lib/apt/lists/* && \
     mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" && \
     echo "opcache.validate_timestamps=0" >> "$PHP_INI_DIR/conf.d/opcache.ini" && \
+    echo "opcache.memory_consumption=256" >> "$PHP_INI_DIR/conf.d/opcache.ini" && \
+    echo "opcache.max_accelerated_files=20000" >> "$PHP_INI_DIR/conf.d/opcache.ini" && \
     sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf && \
-    sed -i 's/Listen 80/Listen ${PORT:-8080}/g' /etc/apache2/ports.conf && \
-    sed -i 's/:80/:${PORT:-8080}/g' /etc/apache2/sites-available/000-default.conf
+    sed -i 's/Listen 80/Listen 8080/g' /etc/apache2/ports.conf && \
+    sed -i 's/:80/:8080/g' /etc/apache2/sites-available/000-default.conf
 
 # Copy application
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
@@ -41,7 +43,10 @@ RUN mkdir -p storage/framework/{sessions,views,cache} storage/logs bootstrap/cac
     chown -R www-data:www-data storage bootstrap/cache && \
     chmod -R 775 storage bootstrap/cache && \
     COMPOSER_ALLOW_SUPERUSER=1 composer dump-autoload --optimize --classmap-authoritative && \
-    COMPOSER_ALLOW_SUPERUSER=1 composer run-script post-autoload-dump
+    COMPOSER_ALLOW_SUPERUSER=1 composer run-script post-autoload-dump && \
+    php artisan config:clear && \
+    php artisan route:clear && \
+    php artisan view:clear
 
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
