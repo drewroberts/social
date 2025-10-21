@@ -23,15 +23,15 @@ chmod -R 775 storage bootstrap/cache
 
 # Wait for database to be ready (Cloud SQL)
 echo "Waiting for database connection..."
-timeout=30
+timeout=60
 counter=0
-until php artisan db:show > /dev/null 2>&1 || [ $counter -eq $timeout ]; do
+until php artisan inspire > /dev/null 2>&1 || [ $counter -eq $timeout ]; do
     echo "Database not ready, waiting... ($counter/$timeout)"
-    sleep 2
-    counter=$((counter + 1))
+    sleep 3
+    counter=$((counter + 3))
 done
 
-if [ $counter -eq $timeout ]; then
+if [ $counter -ge $timeout ]; then
     echo "Warning: Database connection timeout. Proceeding anyway..."
 fi
 
@@ -45,18 +45,17 @@ php artisan migrate --force --isolated || {
 
 # Cache Laravel configuration for performance
 # This must run after .env is available
-echo "Caching Laravel configuration..."
+echo "Optimizing Laravel for production..."
+php artisan optimize:clear
 php artisan config:cache
 php artisan route:cache
+php artisan view:cache
 
-# Optional: Cache views (you mentioned runtime caching is preferred)
-# Uncomment if you want to pre-cache views:
-# php artisan view:cache
+# Optimize Filament components
+php artisan filament:optimize
 
-# Clear any stale caches (in case of deployment issues)
-echo "Ensuring clean cache state..."
-php artisan config:clear || true
-php artisan config:cache
+# Link public storage if needed
+php artisan storage:link || echo "Storage already linked or not needed"
 
 echo "Laravel initialization complete!"
 
