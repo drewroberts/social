@@ -79,4 +79,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Account::class)->active();
     }
+
+    /**
+     * Determine if the user can access any Filament panel.
+     */
+    public function canAccessFilament(): bool
+    {
+        return true; // Allow all authenticated users for now
+    }
 }

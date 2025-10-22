@@ -11,6 +11,18 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+// Debug route to test Filament authorization
+Route::get('/debug-auth', function () {
+    $user = \Illuminate\Support\Facades\Auth::user();
+    return response()->json([
+        'authenticated' => \Illuminate\Support\Facades\Auth::check(),
+        'user' => $user ? $user->toArray() : null,
+        'can_access_filament' => $user ? method_exists($user, 'canAccessFilament') && $user->canAccessFilament() : false,
+        'session_id' => session()->getId(),
+        'env' => app()->environment(),
+    ]);
+})->middleware('auth');
+
 Route::get('terms', function () {
     return view('notices.terms');
 })->name('terms');
