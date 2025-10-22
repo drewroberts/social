@@ -14,6 +14,7 @@ Route::get('/', function () {
 // Debug route to test Filament authorization
 Route::get('/debug-auth', function () {
     $user = \Illuminate\Support\Facades\Auth::user();
+
     return response()->json([
         'authenticated' => \Illuminate\Support\Facades\Auth::check(),
         'user' => $user ? $user->toArray() : null,
