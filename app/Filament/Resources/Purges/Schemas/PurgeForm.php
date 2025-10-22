@@ -38,23 +38,16 @@ class PurgeForm
 
                 Components\TextInput::make('status')
                     ->label('Status')
-                    ->default(fn (?Purge $record): string => $record->status ?? 'Pending')
                     ->disabled()
                     ->dehydrated(false),
 
-                Components\TextInput::make('requested_at_display')
+                Components\DateTimePicker::make('requested_at')
                     ->label('Requested At')
-                    ->default(fn (?Purge $record): string => $record?->requested_at?->diffForHumans() ?? 'Not yet requested'
-                    )
-                    ->disabled()
-                    ->dehydrated(false),
+                    ->disabled(),
 
-                Components\TextInput::make('purged_at_display')
+                Components\DateTimePicker::make('purged_at')
                     ->label('Purged At')
-                    ->default(fn (?Purge $record): string => $record?->purged_at?->diffForHumans() ?? 'Not yet purged'
-                    )
-                    ->disabled()
-                    ->dehydrated(false),
+                    ->disabled(),
             ]);
     }
 }
