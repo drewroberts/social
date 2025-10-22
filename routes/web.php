@@ -21,6 +21,10 @@ Route::get('/debug-auth', function () {
         'can_access_filament' => $user ? method_exists($user, 'canAccessFilament') && $user->canAccessFilament() : false,
         'session_id' => session()->getId(),
         'env' => app()->environment(),
+        'app_debug' => config('app.debug'),
+        'app_url' => config('app.url'),
+        'session_driver' => config('session.driver'),
+        'filament_providers' => class_exists('App\Providers\Filament\AdminPanelProvider'),
     ]);
 })->middleware('auth');
 
