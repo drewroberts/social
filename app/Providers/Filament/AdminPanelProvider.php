@@ -57,7 +57,6 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ])
-            ->tenant(null); // Explicitly disable tenancy
+            ]);
     }
 }
